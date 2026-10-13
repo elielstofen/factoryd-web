@@ -1,0 +1,48 @@
+name: Sincronizar catálogo de Wallapop
+
+on:
+  schedule:
+    # 08:00 y 20:00 hora de Madrid (en verano). GitHub usa UTC.
+    - cron: "0 6,18 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar navegador
+        run: |
+          pip install playwright==1.47.0
+          python -m playwright install --with-deps chromium
+      - name: Leer productos con navegador real
+        id: browser
+        continue-on-error: true
+        run: python scripts/sync_wallapop_browser.py
+      - name: Plan B sin navegador
+        if: steps.browser.outcome == 'failure'
+        run: python scripts/sync_wallapop.py
+      - name: Guardar captura para revisar
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: captura-wallapop
+          path: debug/
+          if-no-files-found: ignore
+      - name: Publicar cambios
+        run: |
+          if git diff --quiet products.json; then
+            echo "Sin cambios"
+          else
+            git config user.name "catalog-bot"
+            git config user.email "catalog-bot@users.noreply.github.com"
+            git add products.json
+            git commit -m "Actualizar catálogo"
+            git push
+          fi

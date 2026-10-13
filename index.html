@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Factory D</title>
+<meta name="description" content="Factory D: electrodomésticos nuevos con tara y con garantía en Málaga. Mira el catálogo y compra en Wallapop.">
+<meta name="theme-color" content="#0f7a6c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Factory D · Catálogo">
+<meta property="og:description" content="Electrodomésticos nuevos con tara, con garantía. Puerto de la Torre, Málaga.">
+<meta property="og:image" content="og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317201d'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='34' text-anchor='middle' fill='%233cc3ad'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: cabecera blanca → intro con ficha de datos de la tienda → barra de filtros pegajosa → rejilla de fichas blancas 2/3/4 columnas → quiénes somos → pie.
+   Solo modo claro, a propósito: sala de exposición luminosa, neutros acero (inox) y un verde como acento. */
+:root{
+  --bg:#f2f4f3; --surface:#ffffff; --fg:#141c19; --muted:#5a6661; --line:#dde2df; --line-strong:#c4ccc8;
+  --accent:#0d7566; --accent-soft:#e3f2ef; --accent-fg:#ffffff; --tile:#eceff0; --tile-fg:#8a9599;
+  --warn:#8f4f05; --warn-bg:#fcefdb;
+  --display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --radius:14px; --wrap:1200px; --gutter:clamp(16px,4vw,40px);
+  color-scheme:light;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+button,input,select{font:inherit;color:inherit}
+[hidden]{display:none!important}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gutter)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+
+/* ---------- Cabecera ---------- */
+header.top{padding-block:14px;background:var(--surface);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font:700 1.45rem/1 var(--display);letter-spacing:-.025em;text-decoration:none;white-space:nowrap}
+.brand span{color:var(--accent)}
+.nav{display:flex;align-items:center;gap:6px}
+.nav .lnk{font:500 .92rem/1 var(--body);text-decoration:none;color:var(--muted);padding:10px 12px;border-radius:999px}
+.nav .lnk:hover{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;gap:6px;font:600 .9rem/1 var(--body);padding:11px 16px;border-radius:999px;text-decoration:none;white-space:nowrap;background:var(--accent);color:var(--accent-fg);border:0;transition:filter .15s}
+.btn:hover{filter:brightness(1.08)}
+.btn .long{display:inline}
+@media (max-width:560px){ .nav .lnk{display:none} .btn .long{display:none} .btn{padding:10px 14px} }
+
+/* ---------- Intro ---------- */
+.intro{padding-block:clamp(28px,5.5vw,56px) clamp(24px,4vw,40px)}
+.intro .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:end}
+@media (max-width:820px){.intro .wrap{grid-template-columns:minmax(0,1fr)}}
+.eyebrow{font:600 .76rem/1 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+.intro h1{font:700 clamp(2.1rem,6vw,3.8rem)/1 var(--display);letter-spacing:-.04em;margin:0 0 16px;max-width:14ch;text-wrap:balance}
+.intro p{color:var(--muted);max-width:50ch;margin:0;font-size:clamp(1rem,1.6vw,1.08rem);text-wrap:pretty}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin:0;padding:6px 20px}
+.facts div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-block:13px;border-top:1px solid var(--line)}
+.facts div:first-child{border-top:0}
+.facts dt{font-size:.88rem;color:var(--muted)}
+.facts dd{margin:0;font:700 1.05rem/1.2 var(--display);text-align:right;font-variant-numeric:tabular-nums}
+
+/* ---------- Barra de filtros ---------- */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-block:1px solid var(--line)}
+@supports (backdrop-filter:blur(8px)){.bar{background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}}
+.bar .wrap{display:flex;gap:10px 14px;align-items:center;padding-block:10px}
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto;min-width:0;-webkit-overflow-scrolling:touch}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--surface);font:500 .88rem/1 var(--body);padding:9px 13px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.chip:hover{border-color:var(--muted)}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.chip small{opacity:.6;margin-left:5px;font-variant-numeric:tabular-nums}
+.tools{display:flex;gap:8px;flex:0 1 420px;min-width:0}
+.tools input,.tools select{font-size:16px;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface);min-width:0;height:40px}
+.tools input{flex:1 1 auto}
+.tools select{flex:0 0 auto;max-width:44%}
+@media (max-width:760px){
+  .bar .wrap{flex-direction:column;align-items:stretch}
+  .tools{flex:1 1 auto}
+  .chips{margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter)}
+}
+
+/* ---------- Catálogo ---------- */
+.catalog{padding-block:22px 64px}
+.notice{background:var(--warn-bg);color:var(--warn);border-radius:10px;padding:10px 14px;font-size:.88rem;margin-bottom:16px}
+.count{font-size:.88rem;color:var(--muted);margin:0 0 16px;font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:1024px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media (max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+
+.card{text-decoration:none;display:flex;flex-direction:column;gap:9px;min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:8px 8px 14px;transition:border-color .15s,box-shadow .2s,transform .2s;-webkit-tap-highlight-color:transparent}
+.card > :not(.ph){margin-inline:6px}
+@media (hover:hover){.card:hover{border-color:var(--line-strong);box-shadow:0 10px 28px -14px rgb(20 28 25 / .28);transform:translateY(-2px)}}
+.ph{position:relative;aspect-ratio:3/4;width:100%;max-width:100%;border-radius:9px;overflow:hidden;background:var(--tile);isolation:isolate}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .3s ease}
+.ph img.alt{opacity:0}
+@media (hover:hover){ .card:hover .ph img.alt{opacity:1} }
+.ph .empty-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--tile-fg);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;padding:12px;text-align:center}
+.ph .empty-ph svg{width:34%;max-width:64px;height:auto}
+.badge{position:absolute;top:8px;left:8px;z-index:2;font:600 .7rem/1 var(--body);letter-spacing:.05em;text-transform:uppercase;padding:6px 8px;border-radius:6px;background:var(--surface);color:var(--fg)}
+.badge.res{background:var(--warn-bg);color:var(--warn)}
+.nphotos{position:absolute;right:8px;bottom:8px;z-index:2;font:600 .72rem/1 var(--body);padding:5px 7px;border-radius:6px;background:rgb(0 0 0 / .55);color:#fff;display:flex;align-items:center;gap:4px;font-variant-numeric:tabular-nums}
+.nphotos svg{width:12px;height:12px}
+.card .t{font-size:.95rem;line-height:1.35;margin:0;min-height:2.7em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+.card .sub{font-size:.8rem;color:var(--muted);margin:-6px 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums;min-height:1.3em}
+.badge.war{background:var(--accent);color:var(--accent-fg)}
+.card .row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:-2px}
+.price{font:700 1.18rem/1 var(--display);font-variant-numeric:tabular-nums;white-space:nowrap}
+.go{font:600 .8rem/1 var(--body);color:var(--accent);white-space:nowrap}
+.card.is-res .ph img{filter:grayscale(.7) opacity(.75)}
+.card.is-res .empty-ph{opacity:.6}
+.card.is-res .price{color:var(--muted)}
+@media (max-width:640px){ .card{padding:6px 6px 12px} .card > :not(.ph){margin-inline:4px} .card .t{font-size:.88rem} .card .sub{font-size:.75rem} .price{font-size:1.05rem} .go .long{display:none} .badge{font-size:.62rem;padding:5px 6px} }
+
+/* Esqueletos de carga */
+.sk{pointer-events:none}
+.sk .ph{background:var(--tile);animation:pulse 1.4s ease-in-out infinite}
+.sk .l1,.sk .l2{height:.9em;border-radius:4px;background:var(--tile);animation:pulse 1.4s ease-in-out infinite}
+.sk .l2{width:40%}
+@keyframes pulse{50%{opacity:.55}}
+
+.empty{padding:56px 0;text-align:center;color:var(--muted)}
+.empty button{margin-top:12px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 16px;cursor:pointer}
+
+/* ---------- Quiénes somos ---------- */
+.about{border-top:1px solid var(--line);padding-block:clamp(40px,7vw,72px)}
+.about .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:start}
+@media (max-width:820px){.about .wrap{grid-template-columns:minmax(0,1fr)}}
+.about h2{font:700 clamp(1.6rem,3.6vw,2.4rem)/1.08 var(--display);letter-spacing:-.025em;margin:0 0 14px;text-wrap:balance}
+.about p{margin:0 0 12px;max-width:58ch;color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+.steps li{display:grid;grid-template-columns:2rem minmax(0,1fr);gap:12px}
+.steps .n{font:700 1.05rem/1.5 var(--display);color:var(--accent)}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--muted);font-size:.94rem}
+.about .btn{margin-top:8px}
+
+footer{border-top:1px solid var(--line);padding-block:22px 30px;font-size:.84rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="Factory D, inicio">Factory<span>D</span></a>
+    <nav class="nav">
+      <a class="lnk" href="#sobre">Quiénes somos</a>
+      <a class="btn profile-link" href="https://es.wallapop.com/user/factoryd-474056108" target="_blank" rel="noopener"><span class="long">Ver perfil en</span> Wallapop ↗</a>
+    </nav>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" id="eyebrow">Catálogo</p>
+      <h1 id="tagline">Electrodomésticos nuevos con tara, con garantía.</h1>
+      <p>Todo nuestro stock en un sitio, actualizado a diario. Pulsa un producto para ver el anuncio completo y hablar con nosotros en Wallapop.</p>
+    </div>
+    <dl class="facts" id="facts"></dl>
+  </div>
+</section>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="chips" id="chips" role="group" aria-label="Categorías"></div>
+    <div class="tools">
+      <input id="q" type="search" placeholder="Buscar producto" aria-label="Buscar producto" autocomplete="off">
+      <select id="sort" aria-label="Ordenar">
+        <option value="new">Más recientes</option>
+        <option value="asc">Precio ↑</option>
+        <option value="desc">Precio ↓</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<main class="catalog" id="catalogo">
+  <div class="wrap">
+    <div class="notice" id="notice" hidden>Catálogo de ejemplo. Cuando se active la sincronización, aquí aparecerán los productos reales con sus fotos.</div>
+    <p class="count" id="count" aria-live="polite">Cargando catálogo…</p>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>
+      <div>No hay productos que coincidan con tu búsqueda.</div>
+      <button type="button" id="reset">Ver todo el catálogo</button>
+    </div>
+  </div>
+</main>
+
+<section class="about" id="sobre">
+  <div class="wrap">
+    <div>
+      <h2>Quiénes somos</h2>
+      <p id="about">En Factory D vendemos electrodomésticos nuevos con pequeños defectos estéticos.</p>
+      <p>¿Buscas un aparato concreto o una medida que no ves aquí? Escríbenos por Wallapop y te decimos si lo tenemos.</p>
+      <a class="btn profile-link" href="https://es.wallapop.com/user/factoryd-474056108" target="_blank" rel="noopener">Escribirnos en Wallapop ↗</a>
+    </div>
+    <ol class="steps">
+      <li><span class="n">1</span><div><b>Elige aquí</b><span>Filtra por tipo de aparato. El catálogo se actualiza dos veces al día.</span></div></li>
+      <li><span class="n">2</span><div><b>Mira el anuncio</b><span>Cada producto abre su anuncio en Wallapop, con todas las fotos, medidas y detalles de la tara.</span></div></li>
+      <li><span class="n">3</span><div><b>Habla con nosotros</b><span>Escríbenos por el chat de Wallapop para reservarlo y acordar la entrega.</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Factory D</span>
+    <span id="updated"></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var state = {items:[], cat:"Todo", q:"", sort:"new"};
+  var $ = function(id){ return document.getElementById(id); };
+  var fmt = new Intl.NumberFormat("es-ES",{style:"currency",currency:"EUR",minimumFractionDigits:0,maximumFractionDigits:2});
+  var ICON_IMG = '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="10" width="36" height="28" rx="4"/><circle cx="17" cy="20" r="3.5"/><path d="M6 33l10-9 8 7 6-5 12 10"/></svg>';
+  var ICON_STACK = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="4" width="9" height="9" rx="1.5"/><path d="M5 2h8a1 1 0 0 1 1 1v8"/></svg>';
+
+  function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
+  function norm(s){ return String(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""); }
+  function photos(it){
+    var a = Array.isArray(it.images) ? it.images.slice() : [];
+    if (it.image && a.indexOf(it.image) < 0) a.unshift(it.image);
+    return a.filter(Boolean);
+  }
+  function ago(iso){
+    var d = new Date(iso); if (isNaN(d)) return "";
+    var h = Math.round((Date.now()-d)/36e5);
+    if (h < 1) return "hace menos de una hora";
+    if (h < 24) return "hace " + h + (h===1?" hora":" horas");
+    return "el " + d.toLocaleDateString("es-ES",{day:"numeric",month:"long"});
+  }
+
+  function card(it){
+    var p = photos(it);
+    var media = '<div class="empty-ph">'+ICON_IMG+'<span>'+esc(it.category||"Producto")+'</span></div>';
+    if (p[0]) media += '<img src="'+esc(p[0])+'" alt="'+esc(it.title)+'" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">';
+    if (p[1]) media += '<img class="alt" src="'+esc(p[1])+'" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">';
+    var badge = it.reserved ? '<span class="badge res">Reservado</span>'
+      : it.warranty ? '<span class="badge war">Garantía '+esc(it.warranty)+'</span>'
+      : it.shipping ? '<span class="badge">Envío</span>' : "";
+    var sub = [it.condition, it.size].filter(Boolean).join(" · ");
+    var count = p.length > 1 ? '<span class="nphotos">'+ICON_STACK+p.length+'</span>' : "";
+    return '<a class="card'+(it.reserved?' is-res':'')+'" href="'+esc(it.url)+'" target="_blank" rel="noopener" aria-label="'+esc(it.title)+', '+fmt.format(it.price||0)+(it.reserved?', reservado':'')+'. Ver en Wallapop">'+
+      '<div class="ph">'+media+badge+count+'</div>'+
+      '<p class="t">'+esc(it.title)+'</p>'+
+      '<p class="sub">'+esc(sub)+'</p>'+
+      '<div class="row"><span class="price">'+fmt.format(it.price||0)+'</span><span class="go"><span class="long">Ver en Wallapop </span>↗</span></div></a>';
+  }
+
+  function render(){
+    var q = norm(state.q);
+    var list = state.items.filter(function(it){
+      return (state.cat==="Todo" || it.category===state.cat) && (!q || norm(it.title).indexOf(q)>-1);
+    });
+    list.sort(function(a,b){
+      var r = (a.reserved?1:0)-(b.reserved?1:0); if (r) return r;
+      if (state.sort==="asc") return (a.price||0)-(b.price||0);
+      if (state.sort==="desc") return (b.price||0)-(a.price||0);
+      return a._i-b._i;
+    });
+    $("grid").innerHTML = list.map(card).join("");
+    $("empty").hidden = list.length>0;
+    var avail = list.filter(function(i){return !i.reserved;}).length;
+    $("count").textContent = list.length ? (list.length + (list.length===1?" producto":" productos") + (avail<list.length ? " · "+avail+" disponibles" : "")) : "";
+  }
+
+  function renderChips(){
+    var counts = {};
+    state.items.forEach(function(i){ if(i.category) counts[i.category]=(counts[i.category]||0)+1; });
+    var cats = ["Todo"].concat(Object.keys(counts).sort(function(a,b){return counts[b]-counts[a]||a.localeCompare(b,"es");}));
+    $("chips").innerHTML = cats.map(function(c){
+      var n = c==="Todo" ? state.items.length : counts[c];
+      return '<button type="button" class="chip" aria-pressed="'+(c===state.cat)+'" data-cat="'+esc(c)+'">'+esc(c)+'<small>'+n+'</small></button>';
+    }).join("");
+    $("chips").hidden = cats.length<=2;
+  }
+
+  function skeleton(){
+    var s = ""; for (var i=0;i<8;i++) s += '<div class="card sk" aria-hidden="true"><div class="ph"></div><div class="l1"></div><div class="l2"></div></div>';
+    $("grid").innerHTML = s;
+  }
+
+  function load(data){
+    var s = data.seller||{};
+    state.items = (data.items||[]).map(function(i,idx){ i._i = idx; return i; });
+    if (s.wallapop_url) Array.prototype.forEach.call(document.querySelectorAll(".profile-link"), function(a){ a.href = s.wallapop_url; });
+    if (s.tagline) $("tagline").textContent = s.tagline;
+    if (s.about) $("about").textContent = s.about;
+    var facts = [["Disponibles ahora", state.items.filter(function(i){return !i.reserved;}).length + " aparatos"]];
+    var years = state.items.map(function(i){ return parseInt(i.warranty,10); }).filter(function(n){ return n>0; });
+    if (years.length) {
+      var lo = Math.min.apply(null,years), hi = Math.max.apply(null,years);
+      facts.push(["Garantía", (lo===hi ? lo : lo+"–"+hi) + (hi===1?" año":" años")]);
+    }
+    if (s.sales) facts.push(["Ventas en Wallapop", s.sales]);
+    if (s.location) { facts.push(["Dónde estamos", s.location]); $("eyebrow").textContent = s.location.split(",").pop().trim(); }
+    $("facts").innerHTML = facts.map(function(f){ return "<div><dt>"+esc(f[0])+"</dt><dd>"+esc(f[1])+"</dd></div>"; }).join("");
+    $("notice").hidden = !data.example;
+    if (data.updated_at) $("updated").textContent = "Catálogo actualizado " + ago(data.updated_at);
+    renderChips(); render();
+  }
+
+  $("chips").addEventListener("click", function(e){
+    var b = e.target.closest(".chip"); if(!b) return;
+    state.cat = b.getAttribute("data-cat"); renderChips(); render();
+  });
+  $("q").addEventListener("input", function(e){ state.q = e.target.value; render(); });
+  $("sort").addEventListener("change", function(e){ state.sort = e.target.value; render(); });
+  $("reset").addEventListener("click", function(){ state.q=""; state.cat="Todo"; $("q").value=""; renderChips(); render(); });
+  $("yr").textContent = new Date().getFullYear();
+
+  skeleton();
+  if (window.__CATALOG__) { load(window.__CATALOG__); return; }
+  fetch("products.json", {cache:"no-store"})
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(load)
+    .catch(function(){ $("grid").innerHTML=""; $("count").textContent = "No se ha podido cargar el catálogo. Recarga la página en unos segundos."; });
+})();
+</script>
+</body>
+</html>

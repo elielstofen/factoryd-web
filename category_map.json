@@ -1,0 +1,15 @@
+{
+  "expositor": "Hostelería",
+  "industrial": "Hostelería",
+  "vitrina": "Hostelería",
+  "frigor": "Frigoríficos",
+  "congelador": "Congeladores",
+  "lavavajillas": "Lavavajillas",
+  "lavadora": "Lavadoras y secadoras",
+  "secadora": "Lavadoras y secadoras",
+  "horno": "Cocina",
+  "cocina": "Cocina",
+  "campana": "Cocina",
+  "microondas": "Cocina",
+  "placa": "Cocina"
+}
