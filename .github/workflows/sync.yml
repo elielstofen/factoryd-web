@@ -2,8 +2,8 @@ name: Sincronizar catálogo de Wallapop
 
 on:
   schedule:
-    # 08:00 y 20:00 hora de Madrid (en verano). GitHub usa UTC.
-    - cron: "0 6,18 * * *"
+    # Una vez al día, hacia las 08:45 hora de Madrid (GitHub usa UTC).
+    - cron: "45 6 * * *"
   workflow_dispatch: {}
 
 permissions:

@@ -246,7 +246,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:w
 
   function card(it){
     var p = photos(it);
-    var media = '<div class="empty-ph">'+ICON_IMG+'<span>'+esc(it.category||"Producto")+'</span></div>';
+    var media = '<div class="empty-ph">'+ICON_IMG+'<span>'+(p[0] ? esc(it.category||"Producto") : "Ver fotos en Wallapop")+'</span></div>';
     if (p[0]) media += '<img src="'+esc(p[0])+'" alt="'+esc(it.title)+'" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">';
     if (p[1]) media += '<img class="alt" src="'+esc(p[1])+'" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">';
     var badge = it.reserved ? '<span class="badge res">Reservado</span>'

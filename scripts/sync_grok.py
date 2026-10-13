@@ -26,24 +26,22 @@ API_URL = "https://api.x.ai/v1/responses"
 MODEL = os.environ.get("XAI_MODEL", "grok-4.7")
 DEBUG_DIR = Path(os.environ.get("DEBUG_DIR", "debug"))
 
-PROMPT = f"""Navega este perfil de Wallapop y extrae su catálogo completo: {PROFILE_URL}
+PROMPT = f"""Abre SOLO esta página de perfil de Wallapop y lista los productos que tiene a la venta: {PROFILE_URL}
 
-1. Abre el perfil y carga TODOS los productos en venta (haz scroll / "Ver más" hasta el final).
-2. Entra en cada anuncio para sacar: título, precio, categoría, descripción completa, si está reservado, si tiene envío y las URLs de TODAS sus fotos.
-3. Del vendedor saca: ciudad, número de valoraciones y número de ventas.
+IMPORTANTE: no entres en cada anuncio ni hagas búsquedas adicionales. Usa únicamente la página del perfil
+(con todos sus productos cargados). Necesito, de cada producto visible en el perfil:
+- título, precio, enlace del anuncio (https://es.wallapop.com/item/...)
+- la URL de su foto principal si aparece (https://cdn.wallapop.com/images/...), si no, null
+- si aparece marcado como reservado (true/false), si no lo sabes, null
 
-REGLAS
-- No inventes nada. Si un dato no aparece, pon null.
-- Las fotos tienen que ser URLs reales de https://cdn.wallapop.com/images/... completas.
-- El enlace de cada producto es el del anuncio: https://es.wallapop.com/item/...
-- No incluyas productos vendidos.
-- Si no puedes acceder a Wallapop, responde exactamente {{"error": "motivo"}}.
+Del vendedor, si aparecen en el perfil: número de valoraciones y de ventas.
 
-Responde SOLO con un JSON válido, sin texto antes ni después, con esta forma:
-{{"seller": {{"location": "...", "reviews": 0, "sales": 0}},
-  "items": [{{"title": "...", "price": 0, "currency": "EUR", "category": "...", "description": "...",
-             "images": ["https://cdn.wallapop.com/images/..."], "url": "https://es.wallapop.com/item/...",
-             "reserved": false, "shipping": false}}]}}
+No inventes nada. No incluyas productos vendidos. Si no puedes acceder, responde exactamente {{"error": "motivo"}}.
+
+Responde SOLO con un JSON válido, sin texto antes ni después:
+{{"seller": {{"reviews": 0, "sales": 0}},
+  "items": [{{"title": "...", "price": 0, "url": "https://es.wallapop.com/item/...",
+             "images": ["https://cdn.wallapop.com/images/..."], "reserved": null}}]}}
 """
 
 
