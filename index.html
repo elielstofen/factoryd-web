@@ -144,6 +144,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:w
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
 </style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -310,6 +314,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:w
     renderChips(); render();
   }
 
+  document.addEventListener("click", function(e){
+    var a = e.target.closest && e.target.closest("a[href*='wallapop.com']"); if (!a || !window.va) return;
+    var c = a.closest(".card");
+    try { window.va("event", {name: c ? "Clic producto" : "Clic perfil", data: {producto: c ? (c.querySelector(".t")||{}).textContent : "perfil"}}); } catch(_){}
+  });
   $("chips").addEventListener("click", function(e){
     var b = e.target.closest(".chip"); if(!b) return;
     state.cat = b.getAttribute("data-cat"); renderChips(); render();
