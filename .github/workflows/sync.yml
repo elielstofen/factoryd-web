@@ -42,15 +42,17 @@ jobs:
       - name: Guardar diagnóstico en la rama debug
         if: always()
         run: |
-          cp -r debug /tmp/debug-out
-          git checkout -B debug
+          git config user.name "catalog-bot"
+          git config user.email "catalog-bot@users.noreply.github.com"
+          mkdir -p debug && cp -r debug /tmp/debug-out
+          git checkout --orphan debug-tmp
           git rm -rq --cached . || true
           rm -rf ./* .github .gitignore 2>/dev/null || true
           cp -r /tmp/debug-out/. ./
           echo "Ejecución: ${{ github.run_id }} · Grok: ${{ steps.grok.outcome }}" > RESUMEN.txt
           git add -A
-          git commit -qm "Diagnóstico ejecución ${{ github.run_id }}" || true
-          git push -f origin debug
+          git commit -qm "Diagnóstico ejecución ${{ github.run_id }}"
+          git push -f origin debug-tmp:debug
       - name: Marcar fallo si no se actualizó
         if: steps.grok.outcome != 'success'
         run: exit 1
