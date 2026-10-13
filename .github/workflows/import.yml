@@ -1,0 +1,34 @@
+name: Importar catálogo de Grok
+
+# Se lanza solo al subir un archivo a la carpeta imports/
+on:
+  push:
+    branches: [main]
+    paths: ["imports/**"]
+
+permissions:
+  contents: write
+
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Importar y publicar
+        run: |
+          git config user.name "catalog-bot"
+          git config user.email "catalog-bot@users.noreply.github.com"
+          shopt -s nullglob
+          files=(imports/*)
+          for f in "${files[@]}"; do
+            [ "$(basename "$f")" = "LEEME.md" ] && continue
+            echo "Importando $f"
+            python scripts/import_grok.py "$f"
+            git rm -q "$f"
+          done
+          git add products.json
+          git commit -m "Importar catálogo de Grok" || echo "Sin cambios"
+          git push
