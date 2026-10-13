@@ -21,7 +21,6 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from sync_wallapop import OUT, PROFILE_URL, enrich, guess_category, load_category_map  # noqa: E402
-from main_photo import main_photo  # noqa: E402
 
 API_URL = "https://api.x.ai/v1/responses"
 MODEL = os.environ.get("XAI_MODEL", "grok-4.7")
@@ -59,6 +58,36 @@ def ask_grok(key):
     )
     with urllib.request.urlopen(req, timeout=900) as r:
         return json.loads(r.read().decode("utf-8"))
+
+
+def grok_photos(key, item_urls):
+    """Pide a Grok solo la foto principal de unos anuncios concretos (productos nuevos)."""
+    lista = "\n".join(f"- {u}" for u in item_urls)
+    prompt = f"""Para cada uno de estos anuncios de Wallapop, abre la página y dime la URL de su FOTO PRINCIPAL
+(la primera foto del anuncio). Las fotos de Wallapop tienen URLs del tipo https://cdn.wallapop.com/images/...
+No inventes URLs: si no ves la foto, pon null.
+
+{lista}
+
+Responde SOLO con un JSON válido: {{"photos": {{"<url del anuncio>": "<url de la foto o null>"}}}}"""
+    body = {
+        "model": MODEL,
+        "input": [{"role": "user", "content": prompt}],
+        "tools": [{"type": "web_search", "enable_image_understanding": True}],
+    }
+    req = urllib.request.Request(API_URL, data=json.dumps(body).encode(),
+                                 headers={"Content-Type": "application/json", "Authorization": f"Bearer {key}"})
+    with urllib.request.urlopen(req, timeout=600) as r:
+        resp = json.loads(r.read().decode("utf-8"))
+    (DEBUG_DIR / "grok_photos_response.json").write_text(json.dumps(resp, ensure_ascii=False, indent=2), encoding="utf-8")
+    print("Uso fotos:", json.dumps(resp.get("usage", {}).get("cost_in_usd_ticks")))
+    photos = extract_json(output_text(resp)).get("photos") or {}
+    out = {}
+    for item_url, photo in photos.items():
+        m = re.search(r"-(\d+)$", (item_url or "").split("?")[0])
+        if m and isinstance(photo, str) and photo.startswith("https://cdn.wallapop.com/images/") and m.group(1) in photo:
+            out[item_url.split("?")[0].replace("://www.", "://es.")] = photo.split("?")[0] + "?pictureSize=W800"
+    return out
 
 
 def output_text(resp):
@@ -135,6 +164,10 @@ def main():
         print("Falta XAI_API_KEY.", file=sys.stderr)
         sys.exit(1)
     DEBUG_DIR.mkdir(exist_ok=True)
+    test_url = os.environ.get("PHOTO_TEST_URL", "").strip()
+    if test_url:
+        print("Prueba de foto:", grok_photos(key, [test_url]))
+        return
     previous = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
 
     try:
@@ -162,10 +195,16 @@ def main():
     nuevos = [it for it in items if not it["images"]]
     if nuevos:
         print(f"Productos nuevos sin foto: {len(nuevos)}")
-    for it in nuevos[:15]:
-        url = main_photo(it["url"])
-        if url:
-            it["image"], it["images"] = url, [url]
+    if nuevos:
+        try:
+            found = grok_photos(key, [it["url"] for it in nuevos[:15]])
+        except Exception as e:
+            print(f"No se pudieron buscar fotos nuevas: {e}")
+            found = {}
+        for it in nuevos:
+            if found.get(it["url"]):
+                it["image"], it["images"] = found[it["url"]], [found[it["url"]]]
+        print(f"Fotos encontradas para nuevos: {sum(1 for it in nuevos if it['images'])}/{len(nuevos)}")
     print(f"Grok devolvió {len(data.get('items') or [])} productos; válidos: {len(items)}; descartados: {len(rejected)}")
     if rejected:
         print("Descartados:", "; ".join(rejected[:20]))
