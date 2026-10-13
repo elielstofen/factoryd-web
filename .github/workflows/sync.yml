@@ -12,30 +12,23 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Instalar navegador
+      - name: Pedir el catálogo a Grok
+        id: grok
+        continue-on-error: true
+        env:
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
         run: |
           mkdir -p debug
           set -o pipefail
-          { pip install playwright==1.47.0 && python -m playwright install --with-deps chromium; } 2>&1 | tee debug/install.log
-      - name: Leer productos con navegador real
-        id: browser
-        continue-on-error: true
-        run: |
-          set -o pipefail
-          python scripts/sync_wallapop_browser.py 2>&1 | tee debug/browser.log
-      - name: Plan B sin navegador
-        id: planb
-        if: steps.browser.outcome == 'failure'
-        continue-on-error: true
-        run: |
-          set -o pipefail
-          python scripts/sync_wallapop.py 2>&1 | tee debug/planb.log
+          python scripts/sync_grok.py 2>&1 | tee debug/grok.log
       - name: Publicar catálogo
+        if: steps.grok.outcome == 'success'
         run: |
           git config user.name "catalog-bot"
           git config user.email "catalog-bot@users.noreply.github.com"
@@ -50,15 +43,14 @@ jobs:
         if: always()
         run: |
           cp -r debug /tmp/debug-out
-          git fetch origin debug || true
           git checkout -B debug
           git rm -rq --cached . || true
           rm -rf ./* .github .gitignore 2>/dev/null || true
           cp -r /tmp/debug-out/. ./
-          echo "Ejecución: ${{ github.run_id }} · navegador: ${{ steps.browser.outcome }} · plan B: ${{ steps.planb.outcome }}" > RESUMEN.txt
+          echo "Ejecución: ${{ github.run_id }} · Grok: ${{ steps.grok.outcome }}" > RESUMEN.txt
           git add -A
           git commit -qm "Diagnóstico ejecución ${{ github.run_id }}" || true
           git push -f origin debug
       - name: Marcar fallo si no se actualizó
-        if: steps.browser.outcome == 'failure' && steps.planb.outcome != 'success'
+        if: steps.grok.outcome != 'success'
         run: exit 1
