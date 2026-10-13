@@ -107,11 +107,27 @@ def clean_items(raw_items, cmap):
             "image": imgs[0] if imgs else None,
             "images": imgs,
             "url": url,
-            "reserved": bool(r.get("reserved")),
-            "shipping": bool(r.get("shipping")),
+            "reserved": r.get("reserved") if isinstance(r.get("reserved"), bool) else None,
+            "shipping": r.get("shipping") if isinstance(r.get("shipping"), bool) else None,
         }
         items.append(enrich(it, r.get("description")))
     return items, rejected
+
+
+def merge_previous(items, previous_items):
+    """Rellena lo que Grok no trae (fotos, reservado, garantía...) con lo último conocido de ese anuncio."""
+    prev = {p.get("url"): p for p in previous_items or []}
+    for it in items:
+        p = prev.get(it["url"], {})
+        if not it["images"] and p.get("images"):
+            it["images"], it["image"] = p["images"], p.get("image") or p["images"][0]
+        for k in ("reserved", "shipping"):
+            if it[k] is None:
+                it[k] = bool(p.get(k))
+        for k in ("warranty", "condition", "size"):
+            if not it.get(k) and p.get(k):
+                it[k] = p[k]
+    return items
 
 
 def main():
@@ -141,6 +157,7 @@ def main():
         sys.exit(1)
 
     items, rejected = clean_items(data.get("items"), load_category_map())
+    items = merge_previous(items, previous.get("items"))
     print(f"Grok devolvió {len(data.get('items') or [])} productos; válidos: {len(items)}; descartados: {len(rejected)}")
     if rejected:
         print("Descartados:", "; ".join(rejected[:20]))
