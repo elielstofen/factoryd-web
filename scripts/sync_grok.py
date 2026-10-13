@@ -21,6 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from sync_wallapop import OUT, PROFILE_URL, enrich, guess_category, load_category_map  # noqa: E402
+from main_photo import main_photo  # noqa: E402
 
 API_URL = "https://api.x.ai/v1/responses"
 MODEL = os.environ.get("XAI_MODEL", "grok-4.7")
@@ -156,6 +157,15 @@ def main():
 
     items, rejected = clean_items(data.get("items"), load_category_map())
     items = merge_previous(items, previous.get("items"))
+
+    # Productos nuevos (sin foto guardada): buscar solo su foto principal
+    nuevos = [it for it in items if not it["images"]]
+    if nuevos:
+        print(f"Productos nuevos sin foto: {len(nuevos)}")
+    for it in nuevos[:15]:
+        url = main_photo(it["url"])
+        if url:
+            it["image"], it["images"] = url, [url]
     print(f"Grok devolvió {len(data.get('items') or [])} productos; válidos: {len(items)}; descartados: {len(rejected)}")
     if rejected:
         print("Descartados:", "; ".join(rejected[:20]))
