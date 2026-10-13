@@ -27,14 +27,6 @@ jobs:
           mkdir -p debug
           set -o pipefail
           python scripts/sync_grok.py 2>&1 | tee debug/grok.log
-      - name: Probar la búsqueda de foto principal (solo al lanzarlo a mano)
-        if: github.event_name == 'workflow_dispatch'
-        continue-on-error: true
-        env:
-          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
-        run: |
-          export PHOTO_TEST_URL=$(python -c "import json;print(json.load(open('products.json'))['items'][-1]['url'])")
-          python scripts/sync_grok.py 2>&1 | tee debug/photo_test.log
       - name: Publicar catálogo
         if: steps.grok.outcome == 'success'
         run: |

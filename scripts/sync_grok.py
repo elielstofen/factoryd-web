@@ -164,10 +164,6 @@ def main():
         print("Falta XAI_API_KEY.", file=sys.stderr)
         sys.exit(1)
     DEBUG_DIR.mkdir(exist_ok=True)
-    test_url = os.environ.get("PHOTO_TEST_URL", "").strip()
-    if test_url:
-        print("Prueba de foto:", grok_photos(key, [test_url]))
-        return
     previous = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
 
     try:
@@ -195,20 +191,6 @@ def main():
     nuevos = [it for it in items if not it["images"]]
     if nuevos:
         print(f"Productos nuevos sin foto: {len(nuevos)}")
-    if nuevos:
-        try:
-            found = grok_photos(key, [it["url"] for it in nuevos[:15]])
-        except Exception as e:
-            print(f"No se pudieron buscar fotos nuevas: {e}")
-            found = {}
-        for it in nuevos:
-            if found.get(it["url"]):
-                it["image"], it["images"] = found[it["url"]], [found[it["url"]]]
-        print(f"Fotos encontradas para nuevos: {sum(1 for it in nuevos if it['images'])}/{len(nuevos)}")
-    print(f"Grok devolvió {len(data.get('items') or [])} productos; válidos: {len(items)}; descartados: {len(rejected)}")
-    if rejected:
-        print("Descartados:", "; ".join(rejected[:20]))
-
     prev_n = len(previous.get("items") or [])
     if not items or (prev_n and len(items) < prev_n * 0.5):
         print(f"Demasiados pocos productos válidos ({len(items)} frente a {prev_n} antes). No se guarda.", file=sys.stderr)
