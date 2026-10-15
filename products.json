@@ -1,6 +1,6 @@
 {
   "example": false,
-  "updated_at": "2026-10-14T12:22:31+00:00",
+  "updated_at": "2026-10-15T12:07:24+00:00",
   "seller": {
     "name": "Factory D",
     "wallapop_url": "https://es.wallapop.com/user/factoryd-474056108",
@@ -8,7 +8,7 @@
     "tagline": "Electrodomésticos nuevos con tara, con garantía.",
     "about": "En Factory D vendemos electrodomésticos nuevos con pequeños defectos estéticos: frigoríficos, lavadoras, congeladores, hornos y equipamiento para hostelería. Cada aparato indica en su anuncio la garantía que incluye.",
     "reviews": 5,
-    "sales": 71
+    "sales": 72
   },
   "items": [
     {
@@ -770,28 +770,6 @@
         "https://cdn.wallapop.com/images/10420/ku/46/__/c10420p1259906568/i6482265686.jpg?pictureSize=W800"
       ],
       "url": "https://es.wallapop.com/item/microondas-samsung-90-1259906568",
-      "reserved": false,
-      "shipping": false,
-      "warranty": "2 años",
-      "condition": null,
-      "size": null
-    },
-    {
-      "id": "microondas-whirlpool-25l-900w-1259905646",
-      "title": "Microondas Whirlpool 25L 900W",
-      "price": 90.0,
-      "currency": "EUR",
-      "category": "Cocina",
-      "image": "https://cdn.wallapop.com/images/10420/ku/45/__/c10420p1259905646/i6482260475.jpg?pictureSize=W800",
-      "images": [
-        "https://cdn.wallapop.com/images/10420/ku/45/__/c10420p1259905646/i6482260475.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/45/__/c10420p1259905646/i6482260504.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/45/__/c10420p1259905646/i6482260522.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/45/__/c10420p1259905646/i6482260531.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/45/__/c10420p1259905646/i6482260546.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/45/__/c10420p1259905646/i6482260569.jpg?pictureSize=W800"
-      ],
-      "url": "https://es.wallapop.com/item/microondas-whirlpool-25l-900w-1259905646",
       "reserved": false,
       "shipping": false,
       "warranty": "2 años",
