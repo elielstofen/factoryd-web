@@ -1,6 +1,6 @@
 {
   "example": false,
-  "updated_at": "2026-10-17T11:10:56+00:00",
+  "updated_at": "2026-10-18T11:42:10+00:00",
   "seller": {
     "name": "Factory D",
     "wallapop_url": "https://es.wallapop.com/user/factoryd-474056108",
@@ -11,6 +11,21 @@
     "sales": 72
   },
   "items": [
+    {
+      "id": "lavadora-wonder-6kg-1200rpm-blanca-1314224420",
+      "title": "Lavadora Wonder 6kg 1200rpm Blanca",
+      "price": 195.0,
+      "currency": "EUR",
+      "category": "Lavadoras y secadoras",
+      "image": null,
+      "images": [],
+      "url": "https://es.wallapop.com/item/lavadora-wonder-6kg-1200rpm-blanca-1314224420",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
+      "size": null
+    },
     {
       "id": "frigorifico-y-congelador-infiniton-side-by-side-1313726401",
       "title": "Frigorífico y Congelador Infiniton Side by Side",
@@ -770,28 +785,6 @@
       "warranty": "2 años",
       "condition": null,
       "size": null
-    },
-    {
-      "id": "frigorifico-expositor-bomann-negro-1259902889",
-      "title": "Frigorífico Expositor Bomann Negro",
-      "price": 195.0,
-      "currency": "EUR",
-      "category": "Hostelería",
-      "image": "https://cdn.wallapop.com/images/10420/ku/43/__/c10420p1259902889/i6482245465.jpg?pictureSize=W800",
-      "images": [
-        "https://cdn.wallapop.com/images/10420/ku/43/__/c10420p1259902889/i6482245465.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/43/__/c10420p1259902889/i6482245502.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/43/__/c10420p1259902889/i6482245518.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/43/__/c10420p1259902889/i6482245530.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/43/__/c10420p1259902889/i6482245549.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/43/__/c10420p1259902889/i6482245557.jpg?pictureSize=W800"
-      ],
-      "url": "https://es.wallapop.com/item/frigorifico-expositor-bomann-negro-1259902889",
-      "reserved": false,
-      "shipping": false,
-      "warranty": "2 años",
-      "condition": null,
-      "size": "75 × 45 cm"
     }
   ]
 }
