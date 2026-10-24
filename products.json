@@ -1,6 +1,6 @@
 {
   "example": false,
-  "updated_at": "2026-10-23T12:06:13+00:00",
+  "updated_at": "2026-10-24T11:38:07+00:00",
   "seller": {
     "name": "Factory D",
     "wallapop_url": "https://es.wallapop.com/user/factoryd-474056108",
@@ -8,9 +8,24 @@
     "tagline": "Electrodomésticos nuevos con tara, con garantía.",
     "about": "En Factory D vendemos electrodomésticos nuevos con pequeños defectos estéticos: frigoríficos, lavadoras, congeladores, hornos y equipamiento para hostelería. Cada aparato indica en su anuncio la garantía que incluye.",
     "reviews": 5,
-    "sales": 72
+    "sales": 76
   },
   "items": [
+    {
+      "id": "frigorifico-infiniton-2-puertas-gris-1313701617",
+      "title": "Frigorífico Infiniton 2 Puertas Gris",
+      "price": 150.0,
+      "currency": "EUR",
+      "category": "Frigoríficos",
+      "image": null,
+      "images": [],
+      "url": "https://es.wallapop.com/item/frigorifico-infiniton-2-puertas-gris-1313701617",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
+      "size": null
+    },
     {
       "id": "lavadora-bomann-7kg-1400rpm-blanca-1313722319",
       "title": "Lavadora Bomann 7kg 1400rpm Blanca",
@@ -72,21 +87,6 @@
       "size": null
     },
     {
-      "id": "lavadora-bomann-10kg-1400rpm-blanca-1313719021",
-      "title": "Lavadora Bomann 10kg 1400rpm Blanca",
-      "price": 290.0,
-      "currency": "EUR",
-      "category": "Lavadoras y secadoras",
-      "image": null,
-      "images": [],
-      "url": "https://es.wallapop.com/item/lavadora-bomann-10kg-1400rpm-blanca-1313719021",
-      "reserved": false,
-      "shipping": false,
-      "warranty": null,
-      "condition": null,
-      "size": null
-    },
-    {
       "id": "lavadora-bomann-9kg-1400rpm-blanca-1313713173",
       "title": "Lavadora Bomann 9kg 1400rpm Blanca",
       "price": 270.0,
@@ -110,21 +110,6 @@
       "image": null,
       "images": [],
       "url": "https://es.wallapop.com/item/lavadora-bomann-7kg-1400rpm-blanca-1313708771",
-      "reserved": false,
-      "shipping": false,
-      "warranty": null,
-      "condition": null,
-      "size": null
-    },
-    {
-      "id": "frigorifico-infiniton-2-puertas-gris-1313701617",
-      "title": "Frigorífico Infiniton 2 Puertas Gris",
-      "price": 150.0,
-      "currency": "EUR",
-      "category": "Frigoríficos",
-      "image": null,
-      "images": [],
-      "url": "https://es.wallapop.com/item/frigorifico-infiniton-2-puertas-gris-1313701617",
       "reserved": false,
       "shipping": false,
       "warranty": null,
@@ -282,27 +267,6 @@
       ],
       "url": "https://es.wallapop.com/item/congelador-vertical-inox-bomann-1304388427",
       "reserved": false,
-      "shipping": false,
-      "warranty": null,
-      "condition": null,
-      "size": null
-    },
-    {
-      "id": "lavadora-secadora-siemens-9-6-kg-1206265903",
-      "title": "Lavadora Secadora Siemens 9/6 Kg",
-      "price": 450.0,
-      "currency": "EUR",
-      "category": "Lavadoras y secadoras",
-      "image": "https://cdn.wallapop.com/images/10420/jy/6g/__/c10420p1206265903/i6137244128.jpg?pictureSize=W800",
-      "images": [
-        "https://cdn.wallapop.com/images/10420/jy/6g/__/c10420p1206265903/i6137244128.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/jy/6g/__/c10420p1206265903/i6137244142.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/jy/6g/__/c10420p1206265903/i6137244151.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/jy/6g/__/c10420p1206265903/i6137244158.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/jy/6g/__/c10420p1206265903/i6137244167.jpg?pictureSize=W800"
-      ],
-      "url": "https://es.wallapop.com/item/lavadora-secadora-siemens-9-6-kg-1206265903",
-      "reserved": true,
       "shipping": false,
       "warranty": null,
       "condition": null,
@@ -657,28 +621,6 @@
       "size": "145 × 50 cm"
     },
     {
-      "id": "horno-grill-bomann-ebo-7911-sw-1275767957",
-      "title": "Horno Grill Bomann EBO-7911 SW",
-      "price": 199.0,
-      "currency": "EUR",
-      "category": "Cocina",
-      "image": "https://cdn.wallapop.com/images/10420/l3/k4/__/c10420p1275767957/i6579454933.jpg?pictureSize=W800",
-      "images": [
-        "https://cdn.wallapop.com/images/10420/l3/k4/__/c10420p1275767957/i6579454933.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/l3/k4/__/c10420p1275767957/i6579454969.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/l3/k4/__/c10420p1275767957/i6579454978.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/l3/k4/__/c10420p1275767957/i6579454989.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/l3/k4/__/c10420p1275767957/i6579455001.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/l3/k4/__/c10420p1275767957/i6579455008.jpg?pictureSize=W800"
-      ],
-      "url": "https://es.wallapop.com/item/horno-grill-bomann-ebo-7911-sw-1275767957",
-      "reserved": false,
-      "shipping": false,
-      "warranty": "2 años",
-      "condition": "Nuevo con tara",
-      "size": null
-    },
-    {
       "id": "cocina-electrica-bomann-blanca-1274890009",
       "title": "Cocina Eléctrica Bomann Blanca",
       "price": 190.0,
@@ -785,6 +727,51 @@
       "warranty": "2 años",
       "condition": null,
       "size": null
+    },
+    {
+      "id": "frigorifico-expositor-bomann-negro-1259902889",
+      "title": "Frigorífico Expositor Bomann Negro",
+      "price": 195.0,
+      "currency": "EUR",
+      "category": "Hostelería",
+      "image": null,
+      "images": [],
+      "url": "https://es.wallapop.com/item/frigorifico-expositor-bomann-negro-1259902889",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
+      "size": null
+    },
+    {
+      "id": "lavadora-bomann-7-kg-blanca-1400-rpm-1257693484",
+      "title": "Lavadora Bomann 7 Kg Blanca 1400 Rpm",
+      "price": 220.0,
+      "currency": "EUR",
+      "category": "Lavadoras y secadoras",
+      "image": null,
+      "images": [],
+      "url": "https://es.wallapop.com/item/lavadora-bomann-7-kg-blanca-1400-rpm-1257693484",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
+      "size": null
+    },
+    {
+      "id": "frigorifico-bomann-85x44cm-negro-1270331026",
+      "title": "Frigorífico Bomann 85x44cm Negro",
+      "price": 130.0,
+      "currency": "EUR",
+      "category": "Frigoríficos",
+      "image": null,
+      "images": [],
+      "url": "https://es.wallapop.com/item/frigorifico-bomann-85x44cm-negro-1270331026",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
+      "size": "85 × 44 cm"
     }
   ]
 }
