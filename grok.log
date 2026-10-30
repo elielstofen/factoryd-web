@@ -1,0 +1,3 @@
+Uso: {"input_tokens": 21691, "input_tokens_details": {"cached_tokens": 13824}, "output_tokens": 7652, "output_tokens_details": {"reasoning_tokens": 4793}, "total_tokens": 29343, "num_sources_used": 0, "num_server_side_tools_used": 3, "cost_in_usd_ticks": 835580000, "server_side_tool_usage_details": {"web_search_calls": 3, "x_search_calls": 0, "x_posts_fetched": 0, "x_users_fetched": 0, "code_interpreter_calls": 0, "file_search_calls": 0, "mcp_calls": 0, "document_search_calls": 0, "image_generation_calls": 0}, "context_details": {"input_tokens": 9860, "output_tokens": 7134}}
+Productos nuevos sin foto: 16
+OK: 40 productos guardados.
