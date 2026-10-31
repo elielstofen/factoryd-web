@@ -1,6 +1,6 @@
 {
   "example": false,
-  "updated_at": "2026-10-30T13:33:34+00:00",
+  "updated_at": "2026-10-31T13:04:04+00:00",
   "seller": {
     "name": "Factory D",
     "wallapop_url": "https://es.wallapop.com/user/factoryd-474056108",
@@ -8,7 +8,7 @@
     "tagline": "Electrodomésticos nuevos con tara, con garantía.",
     "about": "En Factory D vendemos electrodomésticos nuevos con pequeños defectos estéticos: frigoríficos, lavadoras, congeladores, hornos y equipamiento para hostelería. Cada aparato indica en su anuncio la garantía que incluye.",
     "reviews": 5,
-    "sales": 76
+    "sales": 78
   },
   "items": [
     {
@@ -271,28 +271,6 @@
       "warranty": null,
       "condition": null,
       "size": null
-    },
-    {
-      "id": "lavavajillas-bomann-tsg-7406-encimera-1259900302",
-      "title": "Lavavajillas Bomann TSG 7406 Encimera",
-      "price": 230.0,
-      "currency": "EUR",
-      "category": "Lavavajillas",
-      "image": "https://cdn.wallapop.com/images/10420/ku/41/__/c10420p1259900302/i6482231890.jpg?pictureSize=W800",
-      "images": [
-        "https://cdn.wallapop.com/images/10420/ku/41/__/c10420p1259900302/i6482231890.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/41/__/c10420p1259900302/i6482231925.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/41/__/c10420p1259900302/i6482231935.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/41/__/c10420p1259900302/i6482231950.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/41/__/c10420p1259900302/i6482231959.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/41/__/c10420p1259900302/i6482231970.jpg?pictureSize=W800"
-      ],
-      "url": "https://es.wallapop.com/item/lavavajillas-bomann-tsg-7406-encimera-1259900302",
-      "reserved": true,
-      "shipping": false,
-      "warranty": "2 años",
-      "condition": "Nuevo con tara",
-      "size": "55 × 45 cm"
     },
     {
       "id": "frigorifico-expositor-bomann-negro-1259901990",
@@ -767,6 +745,21 @@
       "image": null,
       "images": [],
       "url": "https://es.wallapop.com/item/frigorifico-bomann-85x44cm-negro-1270331026",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
+      "size": "85 × 44 cm"
+    },
+    {
+      "id": "congelador-3-cajones-bomann-85x44-cm-blanco-1270330802",
+      "title": "Congelador 3 cajones Bomann 85x44 cm Blanco",
+      "price": 130.0,
+      "currency": "EUR",
+      "category": "Congeladores",
+      "image": null,
+      "images": [],
+      "url": "https://es.wallapop.com/item/congelador-3-cajones-bomann-85x44-cm-blanco-1270330802",
       "reserved": false,
       "shipping": false,
       "warranty": null,
