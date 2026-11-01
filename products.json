@@ -1,6 +1,6 @@
 {
   "example": false,
-  "updated_at": "2026-10-31T13:04:04+00:00",
+  "updated_at": "2026-11-01T13:47:10+00:00",
   "seller": {
     "name": "Factory D",
     "wallapop_url": "https://es.wallapop.com/user/factoryd-474056108",
@@ -8,7 +8,7 @@
     "tagline": "Electrodomésticos nuevos con tara, con garantía.",
     "about": "En Factory D vendemos electrodomésticos nuevos con pequeños defectos estéticos: frigoríficos, lavadoras, congeladores, hornos y equipamiento para hostelería. Cada aparato indica en su anuncio la garantía que incluye.",
     "reviews": 5,
-    "sales": 78
+    "sales": 79
   },
   "items": [
     {
@@ -313,27 +313,6 @@
       "warranty": null,
       "condition": null,
       "size": "178 × 84 cm"
-    },
-    {
-      "id": "secadora-whirlpool-8-kg-bomba-calor-1259890702",
-      "title": "Secadora Whirlpool 8 Kg Bomba Calor",
-      "price": 190.0,
-      "currency": "EUR",
-      "category": "Lavadoras y secadoras",
-      "image": "https://cdn.wallapop.com/images/10420/ku/3t/__/c10420p1259890702/i6482178657.jpg?pictureSize=W800",
-      "images": [
-        "https://cdn.wallapop.com/images/10420/ku/3t/__/c10420p1259890702/i6482178657.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/3t/__/c10420p1259890702/i6482178680.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/3t/__/c10420p1259890702/i6482178686.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/3t/__/c10420p1259890702/i6482178695.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/ku/3t/__/c10420p1259890702/i6482178699.jpg?pictureSize=W800"
-      ],
-      "url": "https://es.wallapop.com/item/secadora-whirlpool-8-kg-bomba-calor-1259890702",
-      "reserved": false,
-      "shipping": false,
-      "warranty": null,
-      "condition": null,
-      "size": null
     },
     {
       "id": "frigorifico-americano-midea-inox-1280519779",
@@ -760,6 +739,21 @@
       "image": null,
       "images": [],
       "url": "https://es.wallapop.com/item/congelador-3-cajones-bomann-85x44-cm-blanco-1270330802",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
+      "size": "85 × 44 cm"
+    },
+    {
+      "id": "frigorifico-bomann-85x44cm-blanco-1270330260",
+      "title": "Frigorífico Bomann 85x44cm Blanco",
+      "price": 130.0,
+      "currency": "EUR",
+      "category": "Frigoríficos",
+      "image": null,
+      "images": [],
+      "url": "https://es.wallapop.com/item/frigorifico-bomann-85x44cm-blanco-1270330260",
       "reserved": false,
       "shipping": false,
       "warranty": null,
