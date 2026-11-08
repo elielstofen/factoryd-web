@@ -1,6 +1,6 @@
 {
   "example": false,
-  "updated_at": "2026-11-07T13:32:25+00:00",
+  "updated_at": "2026-11-08T13:52:34+00:00",
   "seller": {
     "name": "Factory D",
     "wallapop_url": "https://es.wallapop.com/user/factoryd-474056108",
@@ -8,9 +8,24 @@
     "tagline": "Electrodomésticos nuevos con tara, con garantía.",
     "about": "En Factory D vendemos electrodomésticos nuevos con pequeños defectos estéticos: frigoríficos, lavadoras, congeladores, hornos y equipamiento para hostelería. Cada aparato indica en su anuncio la garantía que incluye.",
     "reviews": 5,
-    "sales": 79
+    "sales": 80
   },
   "items": [
+    {
+      "id": "lavadora-balay-9kg-3ts993b-blanca-1321496208",
+      "title": "Lavadora Balay 9kg 3TS993B Blanca",
+      "price": 260.0,
+      "currency": "EUR",
+      "category": "Lavadoras y secadoras",
+      "image": null,
+      "images": [],
+      "url": "https://es.wallapop.com/item/lavadora-balay-9kg-3ts993b-blanca-1321496208",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
+      "size": null
+    },
     {
       "id": "lavadora-saivod-8kg-blanca-lst1488n-1321509010",
       "title": "Lavadora Saivod 8kg Blanca LST1488N",
@@ -35,21 +50,6 @@
       "image": null,
       "images": [],
       "url": "https://es.wallapop.com/item/lavadora-siemens-9kg-wm14vkh1es-1321504162",
-      "reserved": false,
-      "shipping": false,
-      "warranty": null,
-      "condition": null,
-      "size": null
-    },
-    {
-      "id": "lavadora-balay-9kg-3ts993b-blanca-1321496208",
-      "title": "Lavadora Balay 9kg 3TS993B Blanca",
-      "price": 260.0,
-      "currency": "EUR",
-      "category": "Lavadoras y secadoras",
-      "image": null,
-      "images": [],
-      "url": "https://es.wallapop.com/item/lavadora-balay-9kg-3ts993b-blanca-1321496208",
       "reserved": false,
       "shipping": false,
       "warranty": null,
@@ -551,28 +551,6 @@
       "size": null
     },
     {
-      "id": "congelador-bomann-3c-blanco-85x55cm-1280521633",
-      "title": "Congelador Bomann 3C Blanco 85x55cm",
-      "price": 180.0,
-      "currency": "EUR",
-      "category": "Congeladores",
-      "image": "https://cdn.wallapop.com/images/10420/l6/e0/__/c10420p1280521633/i6610456037.jpg?pictureSize=W800",
-      "images": [
-        "https://cdn.wallapop.com/images/10420/l6/e0/__/c10420p1280521633/i6610456037.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/l6/e0/__/c10420p1280521633/i6610456074.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/l6/e0/__/c10420p1280521633/i6610456084.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/l6/e0/__/c10420p1280521633/i6610456090.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/l6/e0/__/c10420p1280521633/i6610456100.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/l6/e0/__/c10420p1280521633/i6610456111.jpg?pictureSize=W800"
-      ],
-      "url": "https://es.wallapop.com/item/congelador-bomann-3c-blanco-85x55cm-1280521633",
-      "reserved": false,
-      "shipping": false,
-      "warranty": "2 años",
-      "condition": "Nuevo con tara",
-      "size": "85 × 55 cm"
-    },
-    {
       "id": "frigorifico-bomann-negro-185x65cm-1274891675",
       "title": "Frigorífico Bomann Negro 185x65cm",
       "price": 490.0,
@@ -746,6 +724,21 @@
       "shipping": false,
       "warranty": "2 años",
       "condition": "Nuevo con tara",
+      "size": null
+    },
+    {
+      "id": "frigorifico-expositor-bomann-negro-1259903645",
+      "title": "Frigorífico Expositor Bomann Negro",
+      "price": 140.0,
+      "currency": "EUR",
+      "category": "Hostelería",
+      "image": null,
+      "images": [],
+      "url": "https://es.wallapop.com/item/frigorifico-expositor-bomann-negro-1259903645",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
       "size": null
     }
   ]
