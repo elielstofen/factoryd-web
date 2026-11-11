@@ -1,6 +1,6 @@
 {
   "example": false,
-  "updated_at": "2026-11-10T15:14:48+00:00",
+  "updated_at": "2026-11-11T14:44:03+00:00",
   "seller": {
     "name": "Factory D",
     "wallapop_url": "https://es.wallapop.com/user/factoryd-474056108",
@@ -20,6 +20,21 @@
       "image": null,
       "images": [],
       "url": "https://es.wallapop.com/item/lavadora-balay-9kg-3ts993b-blanca-1321496208",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
+      "size": null
+    },
+    {
+      "id": "lavadora-bomann-6kg-blanca-1322623700",
+      "title": "Lavadora Bomann 6kg Blanca",
+      "price": 180.0,
+      "currency": "EUR",
+      "category": "Lavadoras y secadoras",
+      "image": null,
+      "images": [],
+      "url": "https://es.wallapop.com/item/lavadora-bomann-6kg-blanca-1322623700",
       "reserved": false,
       "shipping": false,
       "warranty": null,
@@ -724,21 +739,6 @@
       "shipping": false,
       "warranty": "2 años",
       "condition": "Nuevo con tara",
-      "size": null
-    },
-    {
-      "id": "frigorifico-expositor-bomann-negro-1259903645",
-      "title": "Frigorífico Expositor Bomann Negro",
-      "price": 140.0,
-      "currency": "EUR",
-      "category": "Hostelería",
-      "image": null,
-      "images": [],
-      "url": "https://es.wallapop.com/item/frigorifico-expositor-bomann-negro-1259903645",
-      "reserved": false,
-      "shipping": false,
-      "warranty": null,
-      "condition": null,
       "size": null
     }
   ]
