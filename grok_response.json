@@ -1,0 +1,248 @@
+{
+  "created_at": 1794664030,
+  "completed_at": 1794664083,
+  "id": "588e53ad-a0a4-9a46-9436-ca56c48b13fa",
+  "max_output_tokens": null,
+  "model": "grok-4.7",
+  "object": "response",
+  "output": [
+    {
+      "id": "rs_588e53ad-a0a4-9a46-9436-ca56c48b13fa",
+      "summary": [
+        {
+          "text": "Voy a abrir únicamente el perfil de Wallapop indicado y extraer los productos a la venta.",
+          "type": "summary_text"
+        }
+      ],
+      "type": "reasoning",
+      "status": "completed",
+      "encrypted_content": "wvE+Mg/0HmnQY7fI/wb1LClk55FZhdxVRbbdM6RjyX+SvVxvrHTAG7pFkWFTAM2anWE0W3XKndtPxfDIK8MBz0MVOjujE/CJPTLWuxOTYEgL9Tlc+iQN39KXbLSWdUDETLp0gmLmX1pMxE/bcJje373iqooO3ppG3MpOIXkJoxz47fKHXGDK9ysNlrAM+H+GD6+JDM2CMa8v/PbDc+XMfkH+zJUpk8LzAW8Ck9JqeTapmkXT88XmKQGGki9elDzF3WbcqZRUCN3OzJB04T5YQdBtXvWkLm5mTF+vY2jTyArC0W7OQLkp5EzZYTKUzOZkkxuEkQI9etVvhCpZ9+QxUa+KoCSlFabURx2L8UmJy20gnW7Yujt7EeNWCsTTOMXs6hvjDLaMWnlfiK69bksS4d2TKuA42KMht+2AgErczDj4bdzHi0hdCgYwCIzqJ64eHwaoOFVmJkxgwBYZ2KWnfpkAaD2jXAbX9CqEeN/YTLrXpT35R4dLivAomj+S0ddR80hYF6I5auzuF3YydaHgvlEkpEojgz0Q6j9DYNfdkb87JmNk5oa1+ubtEPNeMJvH8q1c5uDww6WuOtxTbQoYomaFXQOQ9ed7zm2MXztMURiNXrO6IzxU9htJf4nVPb+It3Dp4cM"
+    },
+    {
+      "id": "ws_588e53ad-a0a4-9a46-9436-ca56c48b13fa_call-9b87d81f-030c-4ecf-a961-c872e093da10-0",
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "open_page",
+        "url": "https://es.wallapop.com/user/factoryd-474056108"
+      }
+    },
+    {
+      "id": "ws_588e53ad-a0a4-9a46-9436-ca56c48b13fa_call-9b87d81f-030c-4ecf-a961-c872e093da10-1",
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "query": "site:es.wallapop.com/user/factoryd-474056108",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://ayuda.wallapop.com/hc/es-es/articles/360004667717-Pol%C3%ADtica-de-Anuncios-Prohibidos"
+          },
+          {
+            "type": "url",
+            "url": "https://apify.com/tortuga/wallapop-scraper"
+          },
+          {
+            "type": "url",
+            "url": "https://es.wallapop.com/item/lavavajillas-de-factory-desde-1253333868"
+          },
+          {
+            "type": "url",
+            "url": "https://www.applesfera.com/seguridad/comprador-verdad-te-paga-asi-funciona-nueva-estafa-whatsapp-wallapop"
+          },
+          {
+            "type": "url",
+            "url": "https://es.trustpilot.com/review/wallapop.com?stars=4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tco_588e53ad-a0a4-9a46-9436-ca56c48b13fa_call-9b87d81f-030c-4ecf-a961-c872e093da10-1",
+      "summary": [],
+      "type": "reasoning",
+      "status": "completed",
+      "encrypted_content": "tco_588e53ad-a0a4-9a46-9436-ca56c48b13fa_call-9b87d81f-030c-4ecf-a961-c872e093da10-1_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"
+    },
+    {
+      "id": "tco_588e53ad-a0a4-9a46-9436-ca56c48b13fa_call-9b87d81f-030c-4ecf-a961-c872e093da10-0",
+      "summary": [],
+      "type": "reasoning",
+      "status": "completed",
+      "encrypted_content": "tco_588e53ad-a0a4-9a46-9436-ca56c48b13fa_call-9b87d81f-030c-4ecf-a961-c872e093da10-0_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"
+    },
+    {
+      "id": "rs_588e53ad-a0a4-9a46-9436-ca56c48b13fa",
+      "summary": [],
+      "type": "reasoning",
+      "status": "completed",
+      "encrypted_content": "iUCi/T+Wlet+Aqn8fZ7rtNYkl6dqSbEhAueJXbXOTrep4sKikxj0bDnmeX7B68vb5ih1uQYTfM6JSlqQStFkj1ewxPux0BdFROL3Sx9mP8UpW6t2v2pDk+4Z2OBQjbADTTAfqUpFiSKHa9UHyAkC2n0bvDKUl1bQh0LrR3I6UhGxwFAtoDE3RxGOl902jmJgppFT8XAGqPuR1oROpCiq76EVkImAcNmm3mWhmqbF2MFmHOkYwketB6CFmMFmLhkptfihP+bqpvWIoIFENmpvY/an73zrXopTXWQW+kjZEwAIqn+sFesolttxPNzRgptfNuA4KmvT6iQaEEcZNFJx7PTsf4/NhDsR0zg1fsNztMOdnEwlfoqX3B3NxWORoe5yxJmeMo2jdgFavGyL3rB6E8k9YwL4wL30c7x6Yqc4HqXElQtRssLsypjW6mgyo3GwBjmuR9p1FtnFuLk71zEw7f+6DfgljZ1O74TDTKDCvc+GomnIhFNn+vrYsPNpy8iu8jDG4jw1pQOMsxMOARSwYWJIjssFoL4eQl5TXWBVnnnDddnPyvyXPS27jLj3LYkEC5KVCChS2rbypROCy68oCh2l3mxvMKex/PHb0WbadTKs48q+rOXkEyU8y3M2nWE/m1LeaGwRmt6vbTrtHcTHnqpUGbcdWcklEQXR+k5fVEreW33UJnqQUr8ItEGsRc/782N58x6nJ69iVhu3USa8Dw0wLfxiFXpCll7feu5PgLLchJx1bN0Y/OuCNni5GnrtW2QUzt7nb909Yg5mf+vLbJ0Xqc6JlHJ8/qAD+83v66X0wEOG5r69j2cpDSlOvydyFTN4Nfhklbk9YPaocuBri17zNQiWD0KdNlSsfDMhRLehKED/5Lm9RgRDQcL2T4rkBNcYP0tjqx9zzn5qgBMalzTkGDVUDpgYh8v4mpAWbTu+n2/VdltiMFUH5u/atKc+IgTxNv9qLZF0YvwOgxgh3K7TNQoTHv5iboLbpQgBPCLlk/eCwhJV+1Vcap/+muhD7YNUs4yaEc6LdqDQb+NkUdQ0nDp38iSBw4PePcRsNKLg1OiknGNbDeGv6VVhd1BXtjXiHdqhri2LT84q6GYmVzWCPKSsFCcMcVqyvM4hS4CEVeuBv2Gxewl1cswCDdmKUFj/KoGYLkd/s3QX65C6ixJ/bAU1gl7ZDuA9eitQfIb5/vDwgwxws/7/I3heTx3d8nN9YUQAYEryuKm104oOJ5Dl5awqWKJyZFMsoe3jeUNL+4GCGOleHWh9Bx2kUUvsfYSWwwuDhE5Q17HRAbjV7IfuCtvjl0jXgjZm5hmU10x7PCUDQG2XXlVzGWKj6U0kf+2G7+/hXyHSdugJ97/8QossKdSVgsfH0fSNM7128Q72KNrGyu/r4qsnAf4Hy5R/rdOpHEyNFuCbUcxIDdyVErEJHwZ1jU7Gbk6r"
+    },
+    {
+      "id": "ws_588e53ad-a0a4-9a46-9436-ca56c48b13fa_call-9b87d81f-030c-4ecf-a961-c872e093da10-2",
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "open_page",
+        "url": "https://es.wallapop.com/user/factoryd-474056108"
+      }
+    },
+    {
+      "id": "ws_588e53ad-a0a4-9a46-9436-ca56c48b13fa_call-9b87d81f-030c-4ecf-a961-c872e093da10-3",
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "find_in_page",
+        "url": "https://es.wallapop.com/user/factoryd-474056108",
+        "pattern": "cdn\\.wallapop\\.com|reservad|valoracion|reseña|review|Ventas|item/"
+      }
+    },
+    {
+      "id": "tco_588e53ad-a0a4-9a46-9436-ca56c48b13fa_call-9b87d81f-030c-4ecf-a961-c872e093da10-2",
+      "summary": [],
+      "type": "reasoning",
+      "status": "completed",
+      "encrypted_content": "tco_588e53ad-a0a4-9a46-9436-ca56c48b13fa_call-9b87d81f-030c-4ecf-a961-c872e093da10-2_/3d1loUPiWFSkMPn0vPopQLjO06VGlQcPoZB/5CjJUhBcwEH/U3fEe4nF945Ws8DUxWbQpGPXxDcPg4qyf1q64M9qR0qwkBYxOP+exwIIIyMv0Ec7pbym4uO/IsgNIHyArJC81t4aYgZcymZLvskjLUyPSsenYhf+vXOfztBrF4x8HNCqVuZBsb/9u9xQF66/w+ynlqqZEg+QlBf8nJdcf1wixUMRts3BY2iA1rtMw4oj0p6JPhREsoeNJIR5Tb59rFJ8Cc/lZsDRCtlCQ50RrWo0+c4KMVMs2R2hF/O0xw+19EwXRobJTXViaH3iELzvAIHARad5oztvefBz8yqUqpxs/wcyfiHD19DR7dDrNRdDgBdQYhqxsrCahrQYxtsc7Ytto3gCIq0TZahM1WVZajvCUwZ7QpsP5vJOU5/UWarTH3/RmknR7eVP5RldQp5fqVyfk6uXsxWlWxmB3Zriezmw1g5yRR3ZaB1ZjjpkTDNYldHhZYxRsYfoqmDPgiITEgZCvL+LwjcmOvf2Jt9a/SdXNg"
+    },
+    {
+      "id": "tco_588e53ad-a0a4-9a46-9436-ca56c48b13fa_call-9b87d81f-030c-4ecf-a961-c872e093da10-3",
+      "summary": [],
+      "type": "reasoning",
+      "status": "completed",
+      "encrypted_content": "tco_588e53ad-a0a4-9a46-9436-ca56c48b13fa_call-9b87d81f-030c-4ecf-a961-c872e093da10-3_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"
+    },
+    {
+      "id": "rs_588e53ad-a0a4-9a46-9436-ca56c48b13fa",
+      "summary": [],
+      "type": "reasoning",
+      "status": "completed",
+      "encrypted_content": "o32W8QR9f56yiAzXwfXyqfuqJ3SorPCwOj6HFpakZvaMtlLWklgTzx9+JIWQ4hj121qysOe2RFJC3hbRnDXYACnaR51JSERZf8GhhQH7dq4UVcG9ArVX6ritbU+EI/QjK/DiSkffnW2pjjubN5zaOWAp2+xuvpPnbE6GcVS+6s2x6O1HDOdNQ4CfCvE5e74jIXlW8eeI4twtyxS8cW9b+XdIcLB7Z46KFXVq2BsyX7EytL1F+cEyAdMV25Jtj7lvSf1DsqK6iTPDYd0pZNhLXP/kz5j6x2ZuUmVqESDScfANHBbts3jKKTtc0CyTi1295OllUQjZkzT9+y3ShL3r4RAyibDTkot4OIAhuVw/fjJOX3Rtmq46/KYPVYk+EJv9uB9tOeeMZna/ydjx47vB80BJYUAvUBlUd4fi+xATl31gdzXhUQ90fs0joNvymaXN4BaZjKKvobLitYjznU5bPl8bsuMrbupKlyIrmExmfThlSdHjYm99YjkmUPbyRTKsnwDvfTMkaNF2faA+GcPDuZEpyqmU0zBfeqW5QynR3EAUHLQsGymdPs4fBSGg5sSvQ4v46SUbQ+LQkwZj7j3WCC+rgYdJz/SyDI/e4czaWBQcUhR3qcgNW/2TfGYctBTTgoELFAsR094HFvnnjzRXyvF6DfqaZV2NYllc+5tR8Hzz3+sqKkOZvcFMqsuNL7aANWyUWEkc1AvYG0r5MTK/18UP07cBjt6tuzDX+nJSYTs1a+PADTBPXNTwQOtw3glX6c1yyql5Rsjb2zq7qdTnBmCBACEqwDnoBTgSdeXz3rMTxrcR9+4/oDmkhhRdTl2usI0NPZkgTG7q63/7TiTjArujn4XLNhYeIRGSQPoX3cPYoxpI0Xqm139/CAh6jDVepQsEydgneIEx8I4NvuKdzGaTVaH+X53xIN2iEirpSV2yuUIqnwF+scJx+YZp6w2LIvGnOgFonvVDp0E9v+NbGc1T6cKZMBXw0ZpA8jlFnSi0TJ3ZaaHUlTbnKS9a8IlTZ/X9bWz8ZXfh4Gbp7IXzQL18Utp2h5kfiq5eHxIAfXTv8wYZ02QxbK1kW8TJSI+8+K6amZDP/4dyzDcLW+k7JW2NBZZzZvVmgar/+YY7un3e+Y3wamqi7JZW6JEWXyrcIdDFT4y9XH++jzg44p1Y20/87NUCwXM8Xr7TA7L+TiK1P3ki4VAashp23BzVgZLSlgVm66z1G5QgkxShSQ8ZuMOrbQ6oLfmxYyNF5oiHAghK13d4Cbrj2LUEt6Gg/+u1pdRaHJRPVnzLmGKq8E6tHkR35c2DlU1QNBmxrzADnsSyX/OlXg4Ywv15jtgpaAuBniwUYldKIhy6fQIsv7pJkxcyU3+efM4w7foZfvHc8KUXtaUO8WMhITLKeGOKxrjm9yeA287EBnj8XQYNfrZIbOrqMyeWEgUb2buVqKA+EY6yv/ybZF9GL1NrNuNOstW4dpfLwK/klQHYSurrR4ijiy6AERmxzu3vtGy9eHRNXp4nMWv/ZRbZoy7HAGzbT55MH1ulzbdDw42pF/JBrSGMpLUrdkRokGllhcLXhMF7NlxVwWH2wC4IlRbKSqOC2osB3fwuVyArX0Unijn8SvBFfAA1rFmfRL8dIDWMnbC6jrHRrmh07ahe78Ecx7EuWH472jbkLsw4ve/nJX5kP3UQVc4MzaA8i/RdCh1GwEY1y0BP9xVaSGpNd7Er/0qreODTE+2tTZkQn2bw/BHaVDDXJILcQDgm/TXYiABo65xTqyINMnif7fGVnWCBzVLvHIlAKdg1jLMVPYij6kMhim1NUej9CIoc6aoPHAS2uc4vsCB9xK/t+BFabpsHPll7QqF3cigY3Ee/6u0HVvqkpPnd7lt0SkgleudVfHox59xpQq4kirHXow/gARAgZasrOAPu0TccIs3G7otnO0ko3M2FxnyXMPvRH0maOAsueNR0OoTHxAdeY4dhaqYltEDZu48gCL0BywuQUvycWxD53oLarQbT+I7cT/cnzHzZWpf1CpjrnJuI4XSdxc97p/vPuI65QGN3nzlIYEZEXXPXFBzILkD6M+Brv6g03w/L3Of9iUaEw94CPX1OE1P5bIahK/W3W/MCLYbd0N7gmRc7uvZwaJp8Acm7Jh+WOWcVPWEBhFKravMSHRe+clI+82L5ZAZ734rObikicVY6ks97/7TaahrSjwj17MT611+Ul27W2qLuR5BBGXR/5VoNN/Psb74JMx0hZETV70nWpqtrAVl3IXG53cTqFUgvQOwkV1C1RWps3s8+AnWJLXfMssvHFdd5V4jojB6NjNHvLqs7wH72CCvOk9hI/bQSLMB+K3BxD4AeZrDCiFiNsCf5N95b9T+1zZXyiN1PmNg806gL1oQKkQVp3adk2NS8j2BkZ3/JVtcKcE7nc+Z7InBzSGddNbhBNoVTvhlGSBNy+/suJiKIFQK8sFlH21KJT709GgjU/D4EKQfY5PF2YFO/jdo5VC1vcDqY9gFDjzA/DE2mSMykdPoF2SAKe+D1RJvENer2V2Rqq2dvM6EktKqXYVaE1+AK4y1U9vaR6cL6LESUAYxokGix3dtbWQlgJqNB8C1kniESmqubtWfGuNF2DoWHgYu2N7FdlGGfSicR/EHu65a+QWdOzL3wNpxGi5G8mOisO568GLY6Jju1CUSuTbrHZgIFHC06eJBLc6Zd+OHSmJ0/Tg61OVIGdfSEmQxwFH12cSfDlVnOLCJ9asqKxomAK3xPi7WSeTyY3U+9dOjRGU+wGq2nMDb1dWsJ7HMArPyP+hGDYPzZ/teCSRb1EYNfr9kVEPquvHj6VdOhCe4UY4q2IqliQMwOVVJ+K3k2pMJhJF6nUe53MkuGO9062S0ejfQXEPQ8jQB8klD4741sw7BmbH7ozYC94+JHlOjG5k08iwOJhwJK5XfuB0/glffWFrK7XIn13hEv2m3kBbJmj93YN8SfGOHbjSHWGkOCEZrXEq5NhG7i/NCoww5IP/v1OtYUaVVSHZ0g/OnZ44cL8IytZ5bbRb9Il0SOndghM727oNk+F3yZHYjnuoODgJma8n2j+5YHsa61Kf84fhjQUrz5ANlEYFXU71r/MBJ+ipKQdYV+wgBpSJYQf20f5KItPamVOyZrURjiI+Z3RdouvCIIFQC8Q4iBSVzZV0leycAhG+wuF/F41SNmqAgtNL18l2kfcIqQYKzTntXBy9dLsInSDfNd9I3Gi6h3y/MEXyth3DyuNKUNa/Hsu7Y/vaEnEtAB4x8ZlpwxJcjxee2VHdYo11JjNunO9oXVD7I/wu7tlhMvmJBb2ZTZrlU6zMjcXHjAXn/0UcnIKg2vuY6fJmuVRw5y62Jp0MOguvX2J7Er08szKDYMQ2y+7ijEGKultmQnZWdBPRct1lpfuF3+IrWp+ufmraBS6OlVOm7YX2jVE40BygCi5BmRj0QB+/E6UlYqgJ7j7kWksbWaL3wEfhWfVBDmPzaEkgNv0MZbMZ0zBhF6wmWF6qixf/A+GYiXPzxALKafFYR/LnjIcpJ7zLgF5mJlveyJY5N3dnI9/JXT5Tof5pqFZC955vz5Vyb3vHsNFeImuSvIQX983b3cQS1WRUTmWXCMvqcq/qjMTxZQ+KWXQUpF6tZ0ZvbK140J2pH4osgZnrcMWAw+ccaJ8+xsXJ2Y+VtnITe3FZTiQZQFPKxz/IBI5vGWD0qK/V2UV6NOf1BTkHCFtKztoozg+Y5d+M5WH6BkF2bruZCspYDelqNCrHJTdEmS4xqeAd1OvhILd4V0TLnNaqzPGcIxkzNU4Zei9jwIZP3pyJkU6s1dCoLIMBTfDTrKjvQRnDbGJQcA1VH7KvW/2eMUli5bZDyKnVF0/XpO/uOFskT4te5UniLw50YkLBbAqXEw630oC+nvxXIC6acqv57AwU75YNLNljDEHM6QRfEeoYU/pt4Nf81z0ANydj94V902RVFKnAEfYaQQU5XaiyDUP3Kodqvko9gEZ5Ze32a5dIWb/g8n935baHX4FcFBB/HS10ilmaQFJrNTcQI3NiAFzNZ5BmTUB34VPMYkTI1C6fl2ExMDbrDX3rCglkj8uAzDks9eHXFSMLgmqu/jVRigCWPoUuXjq0tiB9gU+cbcvM26ovA2nKtZMrzUaziHppMkgfQJFaaHUBupy0NFW2Hw5hwwLwR9R1ZufC4bwa5BPiuu9hWCe8FyWdwoPrSSwpEtFGfa11hlKlnftDeTh19cgR2+Fg344PTwRA5ELdCX9yqARcOvYtvEaz6iw2fqXLPVgWCEufRYpQXI1lNnkhQdu4/PzsYcQWhNGLsOGavNf3HyvXh5fie9LE50yn1szUQ1ggTgvb0JWuJIpxmncRfowL7NLLgtsCmwvMKFIzORBSs3GDJNS0Cx99gGcNyR8vNwhWw26asaA6lxebqiDjjBttahTm2F2RBILPeoGS17WqQaKZiwxZ9yxjQRyApS/JLzG2Yve9U2H3SDi0Rs2rr3L3iSYdxEbgqRYDBBSNWWCbIbmTkLvxAKngvLipqGlhRz6AUOSUwyytE2w7Fv32Jb5jF4YQtUqdfWBxkxJiY6umM6eksiMudDs52jjbrH/ZLzKG2AA+dUIw+8Pp3g835uEQPVoSMPU6KloXakkHxrYm0ZqGiiOUm5I32szhkhgjhNNBv1ig/QDuyiIjYc/J74LG9Uk4DtH/w"
+    },
+    {
+      "content": [
+        {
+          "type": "output_text",
+          "text": "{\"seller\": {\"reviews\": null, \"sales\": 85}, \"items\": [{\"title\": \"Lavadora LG 8kg F4WV3008N3W Blanca\", \"price\": 270, \"url\": \"https://es.wallapop.com/item/lavadora-lg-8kg-f4wv3008n3w-blanca-1321483619\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavadora Bosch Serie 6 EcoSilence 9kg\", \"price\": 250, \"url\": \"https://es.wallapop.com/item/lavadora-bosch-serie-6-ecosilence-9kg-1323380188\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavadora Balay 9kg 3TS993B Blanca\", \"price\": 260, \"url\": \"https://es.wallapop.com/item/lavadora-balay-9kg-3ts993b-blanca-1321496208\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavadora Bomann 6kg Blanca\", \"price\": 180, \"url\": \"https://es.wallapop.com/item/lavadora-bomann-6kg-blanca-1322623700\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavadora Saivod 8kg Blanca LST1488N\", \"price\": 190, \"url\": \"https://es.wallapop.com/item/lavadora-saivod-8kg-blanca-lst1488n-1321509010\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavadora Siemens 9kg WM14VKH1ES\", \"price\": 290, \"url\": \"https://es.wallapop.com/item/lavadora-siemens-9kg-wm14vkh1es-1321504162\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavadora Bosch Serie 6 9kg Blanca\", \"price\": 280, \"url\": \"https://es.wallapop.com/item/lavadora-bosch-serie-6-9kg-blanca-1321494216\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavadora LG 9kg Inox F4WV7009S2S\", \"price\": 290, \"url\": \"https://es.wallapop.com/item/lavadora-lg-9kg-inox-f4wv7009s2s-1321484786\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Infiniton 2 Puertas Gris\", \"price\": 150, \"url\": \"https://es.wallapop.com/item/frigorifico-infiniton-2-puertas-gris-1313701617\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavadora Bomann 7kg 1400rpm Blanca\", \"price\": 200, \"url\": \"https://es.wallapop.com/item/lavadora-bomann-7kg-1400rpm-blanca-1313722319\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico y Congelador Infiniton Side by Side\", \"price\": 650, \"url\": \"https://es.wallapop.com/item/frigorifico-y-congelador-infiniton-side-by-side-1313726401\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavadora Bomann 7kg 1400rpm Blanca\", \"price\": 220, \"url\": \"https://es.wallapop.com/item/lavadora-bomann-7kg-1400rpm-blanca-1313723418\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavadora Bomann 9kg 1400rpm Blanca\", \"price\": 270, \"url\": \"https://es.wallapop.com/item/lavadora-bomann-9kg-1400rpm-blanca-1313713173\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavadora Bomann 7kg 1400rpm Blanca\", \"price\": 240, \"url\": \"https://es.wallapop.com/item/lavadora-bomann-7kg-1400rpm-blanca-1313708771\", \"images\": null, \"reserved\": null}, {\"title\": \"Congelador Vertical Infiniton 185x60 cm Blanco\", \"price\": 390, \"url\": \"https://es.wallapop.com/item/congelador-vertical-infiniton-185x60-cm-blanco-1313699505\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Infiniton 1 Puerta 185x60 cm Blanco\", \"price\": 320, \"url\": \"https://es.wallapop.com/item/frigorifico-infiniton-1-puerta-185x60-cm-blanco-1313697346\", \"images\": null, \"reserved\": null}, {\"title\": \"Horno Grill Infiniton 60 Litros Blanco\", \"price\": 70, \"url\": \"https://es.wallapop.com/item/horno-grill-infiniton-60-litros-blanco-1313695572\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Infiniton 2 Puertas Gris\", \"price\": 170, \"url\": \"https://es.wallapop.com/item/frigorifico-infiniton-2-puertas-gris-1313693659\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Infiniton 2 Puertas Negro\", \"price\": 170, \"url\": \"https://es.wallapop.com/item/frigorifico-infiniton-2-puertas-negro-1313692240\", \"images\": null, \"reserved\": null}, {\"title\": \"Congelador Vertical Inox Bomann\", \"price\": 290, \"url\": \"https://es.wallapop.com/item/congelador-vertical-inox-bomann-1304388427\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico expositor Bomann Negro\", \"price\": 220, \"url\": \"https://es.wallapop.com/item/frigorifico-expositor-bomann-negro-1259901990\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Americano Midea MDRS619FIE46\", \"price\": 490, \"url\": \"https://es.wallapop.com/item/frigorifico-americano-midea-mdrs619fie46-1299397488\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Americano Midea Inox\", \"price\": 490, \"url\": \"https://es.wallapop.com/item/frigorifico-americano-midea-inox-1280519779\", \"images\": null, \"reserved\": null}, {\"title\": \"Armario Frigorifico Industrial de acero inoxidable\", \"price\": 390, \"url\": \"https://es.wallapop.com/item/armario-frigorifico-industrial-de-acero-inoxidable-1293921857\", \"images\": null, \"reserved\": null}, {\"title\": \"Vitrina Expositor Coca-Cola Cristal\", \"price\": 250, \"url\": \"https://es.wallapop.com/item/vitrina-expositor-coca-cola-cristal-1282557852\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavavajillas Bomann 45cm Negro\", \"price\": 280, \"url\": \"https://es.wallapop.com/item/lavavajillas-bomann-45cm-negro-1282533440\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Bomann Blanco 85x55cm\", \"price\": 170, \"url\": \"https://es.wallapop.com/item/frigorifico-bomann-blanco-85x55cm-1280523363\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Bomann pequeño con congelador\", \"price\": 190, \"url\": \"https://es.wallapop.com/item/frigorifico-bomann-pequeno-con-congelador-1280522637\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Bomann Negro 185x65cm\", \"price\": 490, \"url\": \"https://es.wallapop.com/item/frigorifico-bomann-negro-185x65cm-1274891675\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Bomann Blanco 145x55cm\", \"price\": 240, \"url\": \"https://es.wallapop.com/item/frigorifico-bomann-blanco-145x55cm-1276117912\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Combi Bomann Negro 145x50cm\", \"price\": 220, \"url\": \"https://es.wallapop.com/item/frigorifico-combi-bomann-negro-145x50cm-1276116970\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Bomann Blanco 145x50cm\", \"price\": 180, \"url\": \"https://es.wallapop.com/item/frigorifico-bomann-blanco-145x50cm-1276115293\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Combi Bomann Inox 145x50cm\", \"price\": 200, \"url\": \"https://es.wallapop.com/item/frigorifico-combi-bomann-inox-145x50cm-1276112117\", \"images\": null, \"reserved\": null}, {\"title\": \"Cocina Eléctrica Bomann Blanca\", \"price\": 190, \"url\": \"https://es.wallapop.com/item/cocina-electrica-bomann-blanca-1274890009\", \"images\": null, \"reserved\": null}, {\"title\": \"Vitrina expositor comida caliente self service\", \"price\": 395, \"url\": \"https://es.wallapop.com/item/vitrina-expositor-comida-caliente-self-service-1262240569\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavadora Samsung 9 Kg WW90T986DSH Blanco\", \"price\": 650, \"url\": \"https://es.wallapop.com/item/lavadora-samsung-9-kg-ww90t986dsh-blanco-1260806953\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Expositor Bomann Negro\", \"price\": 140, \"url\": \"https://es.wallapop.com/item/frigorifico-expositor-bomann-negro-1259903645\", \"images\": null, \"reserved\": null}, {\"title\": \"Campana extractora cristal negro 60cm\", \"price\": 80, \"url\": \"https://es.wallapop.com/item/campana-extractora-cristal-negro-60cm-1259908370\", \"images\": null, \"reserved\": null}, {\"title\": \"Frigorífico Expositor Bomann Negro\", \"price\": 195, \"url\": \"https://es.wallapop.com/item/frigorifico-expositor-bomann-negro-1259902889\", \"images\": null, \"reserved\": null}, {\"title\": \"Lavadora Bomann 7 Kg Blanca 1400 Rpm\", \"price\": 220, \"url\": \"https://es.wallapop.com/item/lavadora-bomann-7-kg-blanca-1400-rpm-1257693484\", \"images\": null, \"reserved\": null}]}",
+          "logprobs": [],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url": "https://es.trustpilot.com/review/wallapop.com?stars=4",
+              "start_index": 0,
+              "end_index": 0,
+              "title": "https://es.trustpilot.com/review/wallapop.com?stars=4"
+            },
+            {
+              "type": "url_citation",
+              "url": "https://ayuda.wallapop.com/hc/es-es/articles/360004667717-Pol%C3%ADtica-de-Anuncios-Prohibidos",
+              "start_index": 0,
+              "end_index": 0,
+              "title": "https://ayuda.wallapop.com/hc/es-es/articles/360004667717-Pol%C3%ADtica-de-Anuncios-Prohibidos"
+            },
+            {
+              "type": "url_citation",
+              "url": "https://es.wallapop.com/user/factoryd-474056108",
+              "start_index": 0,
+              "end_index": 0,
+              "title": "https://es.wallapop.com/user/factoryd-474056108"
+            },
+            {
+              "type": "url_citation",
+              "url": "https://es.wallapop.com/item/lavavajillas-de-factory-desde-1253333868",
+              "start_index": 0,
+              "end_index": 0,
+              "title": "https://es.wallapop.com/item/lavavajillas-de-factory-desde-1253333868"
+            },
+            {
+              "type": "url_citation",
+              "url": "https://www.applesfera.com/seguridad/comprador-verdad-te-paga-asi-funciona-nueva-estafa-whatsapp-wallapop",
+              "start_index": 0,
+              "end_index": 0,
+              "title": "https://www.applesfera.com/seguridad/comprador-verdad-te-paga-asi-funciona-nueva-estafa-whatsapp-wallapop"
+            },
+            {
+              "type": "url_citation",
+              "url": "https://apify.com/tortuga/wallapop-scraper",
+              "start_index": 0,
+              "end_index": 0,
+              "title": "https://apify.com/tortuga/wallapop-scraper"
+            }
+          ]
+        }
+      ],
+      "id": "msg_588e53ad-a0a4-9a46-9436-ca56c48b13fa",
+      "role": "assistant",
+      "type": "message",
+      "status": "completed"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "previous_response_id": null,
+  "reasoning": {
+    "effort": "high",
+    "summary": "detailed"
+  },
+  "temperature": 0.7,
+  "text": {
+    "format": {
+      "type": "text"
+    }
+  },
+  "tool_choice": "auto",
+  "tools": [
+    {
+      "type": "web_search",
+      "search_context_size": "medium",
+      "enable_image_understanding": false
+    }
+  ],
+  "top_p": 0.95,
+  "usage": {
+    "input_tokens": 25939,
+    "input_tokens_details": {
+      "cached_tokens": 12800
+    },
+    "output_tokens": 6231,
+    "output_tokens_details": {
+      "reasoning_tokens": 3323
+    },
+    "total_tokens": 32170,
+    "num_sources_used": 0,
+    "num_server_side_tools_used": 4,
+    "cost_in_usd_ticks": 900640000,
+    "server_side_tool_usage_details": {
+      "web_search_calls": 4,
+      "x_search_calls": 0,
+      "x_posts_fetched": 0,
+      "x_users_fetched": 0,
+      "code_interpreter_calls": 0,
+      "file_search_calls": 0,
+      "mcp_calls": 0,
+      "document_search_calls": 0,
+      "image_generation_calls": 0
+    },
+    "context_details": {
+      "input_tokens": 14152,
+      "output_tokens": 5327
+    }
+  },
+  "user": null,
+  "incomplete_details": null,
+  "status": "completed",
+  "store": true,
+  "metadata": {
+    "system_fingerprint": "fp_c60958d81f66f847"
+  },
+  "background": false,
+  "service_tier": "default",
+  "truncation": "disabled",
+  "top_logprobs": 0,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 0.0,
+  "prompt_cache_key": null,
+  "max_tool_calls": null,
+  "safety_identifier": null,
+  "error": null,
+  "instructions": null
+}
