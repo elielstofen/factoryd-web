@@ -1,6 +1,6 @@
 {
   "example": false,
-  "updated_at": "2026-11-13T14:54:52+00:00",
+  "updated_at": "2026-11-14T13:48:03+00:00",
   "seller": {
     "name": "Factory D",
     "wallapop_url": "https://es.wallapop.com/user/factoryd-474056108",
@@ -8,7 +8,7 @@
     "tagline": "Electrodomésticos nuevos con tara, con garantía.",
     "about": "En Factory D vendemos electrodomésticos nuevos con pequeños defectos estéticos: frigoríficos, lavadoras, congeladores, hornos y equipamiento para hostelería. Cada aparato indica en su anuncio la garantía que incluye.",
     "reviews": 5,
-    "sales": 83
+    "sales": 85
   },
   "items": [
     {
@@ -35,21 +35,6 @@
       "image": null,
       "images": [],
       "url": "https://es.wallapop.com/item/lavadora-bosch-serie-6-ecosilence-9kg-1323380188",
-      "reserved": false,
-      "shipping": false,
-      "warranty": null,
-      "condition": null,
-      "size": null
-    },
-    {
-      "id": "lavadora-siemens-9kg-wg44g200es-blanca-1321486689",
-      "title": "Lavadora Siemens 9kg WG44G200ES Blanca",
-      "price": 370.0,
-      "currency": "EUR",
-      "category": "Lavadoras y secadoras",
-      "image": null,
-      "images": [],
-      "url": "https://es.wallapop.com/item/lavadora-siemens-9kg-wg44g200es-blanca-1321486689",
       "reserved": false,
       "shipping": false,
       "warranty": null,
@@ -170,21 +155,6 @@
       "image": null,
       "images": [],
       "url": "https://es.wallapop.com/item/lavadora-bomann-7kg-1400rpm-blanca-1313722319",
-      "reserved": false,
-      "shipping": false,
-      "warranty": null,
-      "condition": null,
-      "size": null
-    },
-    {
-      "id": "lavadora-wonder-6kg-1200rpm-blanca-1314224420",
-      "title": "Lavadora Wonder 6kg 1200rpm Blanca",
-      "price": 195.0,
-      "currency": "EUR",
-      "category": "Lavadoras y secadoras",
-      "image": null,
-      "images": [],
-      "url": "https://es.wallapop.com/item/lavadora-wonder-6kg-1200rpm-blanca-1314224420",
       "reserved": false,
       "shipping": false,
       "warranty": null,
@@ -721,6 +691,36 @@
       "image": null,
       "images": [],
       "url": "https://es.wallapop.com/item/campana-extractora-cristal-negro-60cm-1259908370",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
+      "size": null
+    },
+    {
+      "id": "frigorifico-expositor-bomann-negro-1259902889",
+      "title": "Frigorífico Expositor Bomann Negro",
+      "price": 195.0,
+      "currency": "EUR",
+      "category": "Hostelería",
+      "image": null,
+      "images": [],
+      "url": "https://es.wallapop.com/item/frigorifico-expositor-bomann-negro-1259902889",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
+      "size": null
+    },
+    {
+      "id": "lavadora-bomann-7-kg-blanca-1400-rpm-1257693484",
+      "title": "Lavadora Bomann 7 Kg Blanca 1400 Rpm",
+      "price": 220.0,
+      "currency": "EUR",
+      "category": "Lavadoras y secadoras",
+      "image": null,
+      "images": [],
+      "url": "https://es.wallapop.com/item/lavadora-bomann-7-kg-blanca-1400-rpm-1257693484",
       "reserved": false,
       "shipping": false,
       "warranty": null,
