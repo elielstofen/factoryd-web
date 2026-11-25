@@ -1,6 +1,6 @@
 {
   "example": false,
-  "updated_at": "2026-11-24T18:18:43+00:00",
+  "updated_at": "2026-11-25T17:38:15+00:00",
   "seller": {
     "name": "Factory D",
     "wallapop_url": "https://es.wallapop.com/user/factoryd-474056108",
@@ -11,6 +11,28 @@
     "sales": 85
   },
   "items": [
+    {
+      "id": "frigorifico-americano-midea-mdrs619fie46-1299397488",
+      "title": "Frigorífico Americano Midea MDRS619FIE46",
+      "price": 490.0,
+      "currency": "EUR",
+      "category": "Frigoríficos",
+      "image": "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104101.jpg?pictureSize=W800",
+      "images": [
+        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104101.jpg?pictureSize=W800",
+        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104135.jpg?pictureSize=W800",
+        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104142.jpg?pictureSize=W800",
+        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104148.jpg?pictureSize=W800",
+        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104152.jpg?pictureSize=W800",
+        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104157.jpg?pictureSize=W800"
+      ],
+      "url": "https://es.wallapop.com/item/frigorifico-americano-midea-mdrs619fie46-1299397488",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
+      "size": "178 × 84 cm"
+    },
     {
       "id": "lavadora-lg-8kg-f4wv3008n3w-blanca-1321483619",
       "title": "Lavadora LG 8kg F4WV3008N3W Blanca",
@@ -337,28 +359,6 @@
       "warranty": "2 años",
       "condition": "Nuevo con tara",
       "size": "85 × 55 cm"
-    },
-    {
-      "id": "frigorifico-americano-midea-mdrs619fie46-1299397488",
-      "title": "Frigorífico Americano Midea MDRS619FIE46",
-      "price": 490.0,
-      "currency": "EUR",
-      "category": "Frigoríficos",
-      "image": "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104101.jpg?pictureSize=W800",
-      "images": [
-        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104101.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104135.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104142.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104148.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104152.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104157.jpg?pictureSize=W800"
-      ],
-      "url": "https://es.wallapop.com/item/frigorifico-americano-midea-mdrs619fie46-1299397488",
-      "reserved": false,
-      "shipping": false,
-      "warranty": null,
-      "condition": null,
-      "size": "178 × 84 cm"
     },
     {
       "id": "frigorifico-americano-midea-inox-1280519779",
