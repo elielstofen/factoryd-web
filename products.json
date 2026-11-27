@@ -1,6 +1,6 @@
 {
   "example": false,
-  "updated_at": "2026-11-26T17:19:19+00:00",
+  "updated_at": "2026-11-27T16:58:58+00:00",
   "seller": {
     "name": "Factory D",
     "wallapop_url": "https://es.wallapop.com/user/factoryd-474056108",
@@ -8,31 +8,9 @@
     "tagline": "Electrodomésticos nuevos con tara, con garantía.",
     "about": "En Factory D vendemos electrodomésticos nuevos con pequeños defectos estéticos: frigoríficos, lavadoras, congeladores, hornos y equipamiento para hostelería. Cada aparato indica en su anuncio la garantía que incluye.",
     "reviews": 5,
-    "sales": 85
+    "sales": 86
   },
   "items": [
-    {
-      "id": "frigorifico-americano-midea-mdrs619fie46-1299397488",
-      "title": "Frigorífico Americano Midea MDRS619FIE46",
-      "price": 490.0,
-      "currency": "EUR",
-      "category": "Frigoríficos",
-      "image": "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104101.jpg?pictureSize=W800",
-      "images": [
-        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104101.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104135.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104142.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104148.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104152.jpg?pictureSize=W800",
-        "https://cdn.wallapop.com/images/10420/lh/ml/__/c10420p1299397488/i6717104157.jpg?pictureSize=W800"
-      ],
-      "url": "https://es.wallapop.com/item/frigorifico-americano-midea-mdrs619fie46-1299397488",
-      "reserved": false,
-      "shipping": false,
-      "warranty": null,
-      "condition": null,
-      "size": "178 × 84 cm"
-    },
     {
       "id": "lavadora-lg-8kg-f4wv3008n3w-blanca-1321483619",
       "title": "Lavadora LG 8kg F4WV3008N3W Blanca",
@@ -726,6 +704,21 @@
       "warranty": null,
       "condition": null,
       "size": null
+    },
+    {
+      "id": "frigorifico-bomann-85x44cm-negro-1270331026",
+      "title": "Frigorífico Bomann 85x44cm Negro",
+      "price": 130.0,
+      "currency": "EUR",
+      "category": "Frigoríficos",
+      "image": null,
+      "images": [],
+      "url": "https://es.wallapop.com/item/frigorifico-bomann-85x44cm-negro-1270331026",
+      "reserved": false,
+      "shipping": false,
+      "warranty": null,
+      "condition": null,
+      "size": "85 × 44 cm"
     }
   ]
 }
